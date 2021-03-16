@@ -10,3 +10,4 @@ Place the rm_with_check.py file at a location of your choosing. Then add this co
 
 ## A changed dvorak layout based on 'se'. 
 This comes with minial changes. The 'tilde' key now has an tilde on it. 
+> cp se_custom /usr/share/X11/xkb/symbols/se
