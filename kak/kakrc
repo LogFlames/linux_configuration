@@ -1,0 +1,133 @@
+add-highlighter global/ number-lines -relative
+
+face global PrimaryCursor black,rgb:bd6dff+u
+face global PrimaryCursorEol black,rgb:bd6dff+u
+
+face global SecondaryCursor black,rgb:bd6dff+u
+face global SecondaryCursorEol black,rgb:bd6dff+u
+
+face global StatusLineMode blue
+
+face global operator red
+face global functions red
+face global type red
+
+hook global InsertChar \t %{
+    exec -draft -itersel h@
+}
+
+hook global WinSetOption filetype=python %{
+    jedi-enable-autocomplete
+}
+
+hook global WinSetOption filetype=(c|cpp) %{
+    clang-enable-autocomplete
+
+    # hook buffer InsertIdle .* %{
+        # clang-complete
+    # }
+    # clang-enable-diagnostics
+}
+
+
+set global tabstop 4
+set global indentwidth 4
+
+face global MatchingChar black,rgb:c193b9+u
+add-highlighter global/ show-matching
+
+map global insert <s-tab> <c-n>
+
+define-command -params 1 goto-line %{select "%arg{1}.1,%arg{1}.1"}
+alias global g goto-line
+
+map global normal "#" ":comment-line <ret>"
+
+set-option global startup_info_version 20200901
+
+source "%val{config}/plugins/plug.kak/rc/plug.kak"
+
+plug "https://github.com/robertmeta/plug.kak" noload
+plug "alexherbo2/prelude.kak" 
+plug "occivink/kakoune-sudo-write"
+plug "alexherbo2/move-line.kak"
+# plug "alexherbo2/auto-pairs.kak" 
+
+plug "andreyorst/kaktree" defer kaktree %{
+    map global user 'f' ": kaktree-toggle<ret>" -docstring "toggle filetree panel"
+    map global user 'g' ": kaktree-focus<ret>" -docstring "focus filetree panel"
+
+    set-option global kaktree_double_click_duration '0.5'
+    set-option global kaktree_indentation 1
+    set-option global kaktree_dir_icon_open  '▾ 🗁 '
+    set-option global kaktree_dir_icon_close '▸ 🗀 '
+    set-option global kaktree_file_icon      '⠀⠀🖺'
+    set-option global kaktree_tab_open_file true
+} config %{
+    hook global WinSetOption filetype=kaktree %{
+        remove-highlighter buffer/numbers
+        remove-highlighter buffer/matching
+        remove-highlighter buffer/wrap
+        remove-highlighter buffer/show-whitespaces
+    }
+    kaktree-enable
+}
+
+# plug "jdugan6240/powerline.kak" config %{
+#     powerline-start
+# }
+
+plug 'delapouite/kakoune-buffers' %{
+    map global normal ^ q
+    map global normal <a-^> Q
+    map global normal q b
+    map global normal Q B
+    map global normal <a-q> <a-b>
+    map global normal <a-Q> <a-B>
+    map global normal b ': enter-buffers-mode<ret>' -docstring 'buffers'
+    map global normal B ': enter-user-mode -lock buffers<ret>' -docstring 'buffers (lock)'
+}
+
+
+require-module prelude
+require-module move-line
+
+map global normal <down> ': move-line-below<ret>'
+map global normal <up> ': move-line-above<ret>'
+
+# require-module auto-pairs
+# auto-pairs-enable
+
+# define-command -params 0 yell %{echo -markup "{Error}Don't kill kitties!"}
+# alias global q yell
+# alias global wq yell
+
+# Shortcuts
+ 
+# C to add cursor on line under
+# m matches brackets
+# M extends to matched brackets
+# R replace currect selection with yanked text
+# . repeat last insert (i, a or o)
+# alt+i select inside
+# alt+a select around
+# alt+o add empty line below cursor
+# alt+O add empty line above cursor
+
+# alt+k keep matching
+# alt+K keep not matching
+
+# alt+s add cursor to every line
+# " change register
+
+
+# Not with kakoune-buffers installed!!
+    # Q record macro
+    # q play macro
+
+
+# g+t move cursor to window top
+# g+c move cursor to window center
+# g+b move cursor to window bottom
+
+# v change view (cursor placement on screen)
