@@ -11,3 +11,9 @@ Place the rm_with_check.py file at a location of your choosing. Then add this co
 ## A changed dvorak layout based on 'se'. 
 This comes with minial changes. The 'tilde' key now has an tilde on it. 
 > cp se_custom /usr/share/X11/xkb/symbols/se
+
+## Remove 'Tapping Drag'
+[Arch libinput](https://wiki.archlinux.org/index.php/Libinput)
+> sudo libinput list-devices
+> xinput list-props "Name of touchpad device"
+> xinput set-prop "Name of touchpad device" "libinput Tapping Drag Enabled" 0
