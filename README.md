@@ -15,5 +15,8 @@ This comes with minial changes. The 'tilde' key now has an tilde on it.
 ## Remove 'Tapping Drag'
 [Arch libinput](https://wiki.archlinux.org/index.php/Libinput)
 > sudo libinput list-devices
+> 
 > xinput list-props "Name of touchpad device"
+> 
 > xinput set-prop "Name of touchpad device" "libinput Tapping Drag Enabled" 0
+> 
