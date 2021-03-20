@@ -10,13 +10,13 @@ alias open='xdg-open'
 
 # alias rm='rm -I'
 alias rm='python3 /usr/local/bin/rm_with_check.py'
-alias tasks='grep --exclude-dir=.git -nrEI "TODO|FIXME|TEMP|DEBUG|LOOKUP|TASK" . 2>/dev/null'
-alias tasks-keys='echo "TODO|FIXME|TEMP|DEBUG|LOOKUP|TASK"'
+alias tasks='grep --exclude-dir=.git -nrEI "TODO|FIXME|TEMP|DEBUG|LOOKUP|TASK|NOTE" . 2>/dev/null'
+alias tasks-keys='echo "TODO|FIXME|TEMP|DEBUG|LOOKUP|TASK|NOTE"'
 
 alias jobs='jobs -l'
 
 alias R='R -q'
-alias grep='rg'
+# alias grep='rg'
 
 alias icat="kitty +kitten icat"
 alias diff="kitty +kitten diff"
