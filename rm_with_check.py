@@ -7,7 +7,7 @@ stdcrs = curses.initscr()
 curses.echo()
 
 letters = "abcdefghijklmnopqrstuvwxyz"
-warning_tags = [".java", ".py", ".rs", ".cs", ".R", ".db", ".c", ".cpp", ".ts", ".js", ".odin", "*"]
+warning_tags = [".java", ".py", ".rs", ".cs", ".R", ".db", ".c", ".cpp", ".h", ".hpp", ".ts", ".js", ".odin", "*"]
 
 code_length = 3
 
