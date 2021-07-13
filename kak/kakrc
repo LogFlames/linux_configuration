@@ -51,7 +51,7 @@ plug "https://github.com/robertmeta/plug.kak" noload
 plug "alexherbo2/prelude.kak" 
 plug "occivink/kakoune-sudo-write"
 plug "alexherbo2/move-line.kak"
-plug "alexherbo2/auto-pairs.kak" 
+# plug "alexherbo2/auto-pairs.kak" 
 
 plug "andreyorst/kaktree" defer kaktree %{
     map global user 'f' ": kaktree-toggle<ret>" -docstring "toggle filetree panel"
@@ -95,6 +95,7 @@ require-module move-line
 map global normal <down> ': move-line-below<ret>'
 map global normal <up> ': move-line-above<ret>'
 
+# xclip needs to be installed
 map global user y '<a-|>xclip -i -selection clipboard<ret>'
 map global user p '!xclip -o<ret>'
 
@@ -104,7 +105,7 @@ map global user p '!xclip -o<ret>'
 # require-module auto-pairs
 # auto-pairs-enable
 
-    # define-command -params 0 yell %{echo -markup "{Error}Don't kill kitties!"}
+# define-command -params 0 yell %{echo -markup "{Error}Don't kill kitties!"}
 # alias global q yell
 # alias global wq yell
 
