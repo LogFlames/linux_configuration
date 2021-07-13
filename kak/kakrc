@@ -96,8 +96,8 @@ map global normal <down> ': move-line-below<ret>'
 map global normal <up> ': move-line-above<ret>'
 
 # xclip needs to be installed
-map global user y '<a-|>xclip -i -selection clipboard<ret>'
-map global user p '!xclip -o<ret>'
+map global user y '<a-|>xclip -i -selection clipboard<ret>' -docstring "yank to system clipboard"
+map global user p '!xclip -o<ret>' -docstring "paste from system clipboard"
 
 # ,y for yank to clipboard
 # ,p for paste from clipboard
