@@ -51,27 +51,33 @@ plug "https://github.com/robertmeta/plug.kak" noload
 plug "alexherbo2/prelude.kak" 
 plug "occivink/kakoune-sudo-write"
 plug "alexherbo2/move-line.kak"
-# plug "alexherbo2/auto-pairs.kak" 
+plug "occivink/kakoune-filetree"
+# plug "alexherbo2/auto-pairs.kak"
 
-plug "andreyorst/kaktree" defer kaktree %{
-    map global user 'f' ": kaktree-toggle<ret>" -docstring "toggle filetree panel"
-    map global user 'g' ": kaktree-focus<ret>" -docstring "focus filetree panel"
+map global user 'f' ":filetree<ret>" -docstring "Open filetree buffer for current directory"
+face global FileTreeOpenFiles white,rgb:101050+b
+face global FileTreeDirName rgb:777777,default
+face global FileTreeFileName rgb:dddddd,default
 
-    set-option global kaktree_double_click_duration '0.5'
-    set-option global kaktree_indentation 1
-    set-option global kaktree_dir_icon_open  '▾ 🗁 '
-    set-option global kaktree_dir_icon_close '▸ 🗀 '
-    set-option global kaktree_file_icon      '⠀⠀🖺'
-    set-option global kaktree_tab_open_file true
-} config %{
-    hook global WinSetOption filetype=kaktree %{
-        remove-highlighter buffer/numbers
-        remove-highlighter buffer/matching
-        remove-highlighter buffer/wrap
-        remove-highlighter buffer/show-whitespaces
-    }
-    kaktree-enable
-}
+# plug "andreyorst/kaktree" defer kaktree %{
+#     map global user 'f' ": kaktree-toggle<ret>" -docstring "toggle filetree panel"
+#     map global user 'g' ": kaktree-focus<ret>" -docstring "focus filetree panel"
+
+#     set-option global kaktree_double_click_duration '0.5'
+#     set-option global kaktree_indentation 1
+#     set-option global kaktree_dir_icon_open  '▾ 🗁 '
+#     set-option global kaktree_dir_icon_close '▸ 🗀 '
+#     set-option global kaktree_file_icon      '⠀⠀🖺'
+#     set-option global kaktree_tab_open_file true
+# } config %{
+#     hook global WinSetOption filetype=kaktree %{
+#         remove-highlighter buffer/numbers
+#         remove-highlighter buffer/matching
+#         remove-highlighter buffer/wrap
+#         remove-highlighter buffer/show-whitespaces
+#     }
+#     kaktree-enable
+# }
 
 # plug "jdugan6240/powerline.kak" config %{
 #     powerline-start
