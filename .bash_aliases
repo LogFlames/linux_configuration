@@ -25,3 +25,10 @@ alias diff="kitty +kitten diff"
 # if [ -f ~/.bash_aliases ]; then
 #     . ~/.bash_aliases
 # fi
+
+export PATH=/opt/riscv/bin:$PATH
+
+FCEDIT=kak
+VISUAL=kak
+EDITOR=kak
+
