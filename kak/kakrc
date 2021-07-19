@@ -59,6 +59,18 @@ face global FileTreeOpenFiles white,rgb:101050+b
 face global FileTreeDirName rgb:777777,default
 face global FileTreeFileName rgb:dddddd,default
 
+plug "listentolist/kakoune-table" domain "gitlab.com" config %{
+    # map global user t ": evaluate-commands -draft table-align<ret>" -docstring "Align table"
+
+    # map global user t ": table-enable<ret>" -docstring "Enable table mode"
+    # map global user T ": table-disable<ret>" -docstring "Disable table mode"
+    
+    # map global user t ": table-toggle<ret>" -docstring "Toggle table mode"
+    
+    map global user T ": enter-user-mode table<ret>" -docstring "Table"
+}
+
+
 # plug "andreyorst/kaktree" defer kaktree %{
 #     map global user 'f' ": kaktree-toggle<ret>" -docstring "toggle filetree panel"
 #     map global user 'g' ": kaktree-focus<ret>" -docstring "focus filetree panel"
@@ -102,8 +114,11 @@ map global normal <down> ': move-line-below<ret>'
 map global normal <up> ': move-line-above<ret>'
 
 # xclip needs to be installed
-map global user y '<a-|>xclip -i -selection clipboard<ret>' -docstring "yank to system clipboard"
-map global user p '!xclip -o<ret>' -docstring "paste from system clipboard"
+map global user y '<a-|>xclip -i -selection clipboard<ret>' -docstring "Yank to system clipboard"
+map global user p '!xclip -o<ret>' -docstring "Paste from system clipboard"
+
+set-register t '	'
+map global user t '"tp' -docstring "Insert tab without expanding to spaces"
 
 # ,y for yank to clipboard
 # ,p for paste from clipboard
