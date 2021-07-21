@@ -45,8 +45,8 @@ map global normal "#" ":comment-line <ret>"
 
 set-option global startup_info_version 20200901
 
-map global user r ": coderun" -docstring "Run file [...]"
-map global user R ": coderun<ret>" -docstring "Run current file"
+map global user r ":coderun " -docstring "Run file [...]"
+map global user R ":coderun<ret>" -docstring "Run current file"
 
 source "%val{config}/plugins/plug.kak/rc/plug.kak"
 
@@ -55,7 +55,8 @@ plug "alexherbo2/prelude.kak"
 plug "occivink/kakoune-sudo-write"
 plug "alexherbo2/move-line.kak"
 plug "occivink/kakoune-filetree"
-plug "NNBnh/coderun.kak"
+# plug "NNBnh/coderun.kak"
+plug "LogFlames/coderun.kak"
 # plug "alexherbo2/auto-pairs.kak"
 
 map global user 'f' ":filetree<ret>" -docstring "Open filetree buffer for current directory"
