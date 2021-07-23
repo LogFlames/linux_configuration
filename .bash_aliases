@@ -4,6 +4,7 @@ alias lsa='ls -a'
 alias ll='ls -l'
 
 alias p='python3'
+alias k='kak'
 alias ipy='ipython3'
 
 alias open='xdg-open'
