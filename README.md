@@ -20,3 +20,6 @@ This comes with minial changes. The 'tilde' key now has an tilde on it.
 > 
 > xinput set-prop "Name of touchpad device" "libinput Tapping Drag Enabled" 0
 > 
+
+## Adding undervolting
+[https://github.com/georgewhewell/undervolt](https://github.com/georgewhewell/undervolt)
