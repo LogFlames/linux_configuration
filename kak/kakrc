@@ -53,7 +53,7 @@ source "%val{config}/plugins/plug.kak/rc/plug.kak"
 plug "https://github.com/robertmeta/plug.kak" noload
 plug "alexherbo2/prelude.kak" 
 plug "occivink/kakoune-sudo-write"
-plug "alexherbo2/move-line.kak"
+# plug "alexherbo2/move-line.kak"
 plug "occivink/kakoune-filetree"
 # plug "NNBnh/coderun.kak"
 plug "LogFlames/coderun.kak"
@@ -73,6 +73,32 @@ plug "listentolist/kakoune-table" domain "gitlab.com" config %{
     # map global user t ": table-toggle<ret>" -docstring "Toggle table mode"
     
     map global user T ": enter-user-mode table<ret>" -docstring "Table"
+}
+
+provide-module move-line %{
+  # Move selected lines below
+  define-command move-line-below -docstring 'Move selected lines below' %{
+    # Select whole lines
+    execute-keys '<a-x><a-_><a-:>'
+
+    # Iterate each selection and move the lines below
+    evaluate-commands -itersel %{
+      execute-keys -draft 'w'
+      execute-keys -draft 'Zj<a-x>dzP'
+    }
+  }
+
+  # Move selected lines above
+  define-command move-line-above -docstring 'Move selected lines above' %{
+    # Select whole lines
+    execute-keys '<a-x><a-_><a-:>'
+
+    # Iterate each selection and move the lines above
+    evaluate-commands -itersel %{
+      execute-keys -draft '<a-;>b'
+      execute-keys -draft '<a-;>Zk<a-x>dzp'
+    }
+  }
 }
 
 
@@ -107,8 +133,9 @@ plug 'delapouite/kakoune-buffers' %{
     map global normal Q B
     map global normal <a-q> <a-b>
     map global normal <a-Q> <a-B>
-    map global normal b ': enter-buffers-mode<ret>' -docstring 'buffers'
-    map global normal B ': enter-user-mode -lock buffers<ret>' -docstring 'buffers (lock)'
+    map global normal b ': enter-buffers-mode<ret>' -docstring 'Buffers'
+    # map global normal B ': enter-user-mode -lock buffers<ret>' -docstring 'buffers (lock)'
+    map global normal B ': pick-buffers<ret>' -docstring 'Pick buffers'
 }
 
 
@@ -153,11 +180,9 @@ map global user t '"tp' -docstring "Insert tab without expanding to spaces"
 # alt+s add cursor to every line
 # " change register
 
-
 # Not with kakoune-buffers installed!!
     # Q record macro
     # q play macro
-
 
 # g+t move cursor to window top
 # g+c move cursor to window center
