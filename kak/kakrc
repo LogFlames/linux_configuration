@@ -37,6 +37,8 @@ face global MatchingChar black,rgb:c193b9+u
 add-highlighter global/ show-matching
 
 map global insert <s-tab> <c-n>
+# <c-p> to go to previous autocomplete
+# <c-x> to open explicit autocomplete (files for example)
 
 define-command -params 1 goto-line %{select "%arg{1}.1,%arg{1}.1"}
 alias global g goto-line
