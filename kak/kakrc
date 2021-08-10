@@ -185,6 +185,9 @@ map global user t '"tp' -docstring "Insert tab without expanding to spaces"
 # Not with kakoune-buffers installed!!
     # Q record macro
     # q play macro
+# With kakoune-buffers installed
+    # alt + ' record macro
+    # ' play macro
 
 # g+t move cursor to window top
 # g+c move cursor to window center
