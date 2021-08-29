@@ -23,3 +23,6 @@ This comes with minial changes. The 'tilde' key now has an tilde on it.
 
 ## Adding undervolting
 [https://github.com/georgewhewell/undervolt](https://github.com/georgewhewell/undervolt)
+
+## OLED Brightness
+ICC-Brightness
