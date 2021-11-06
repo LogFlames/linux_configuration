@@ -61,6 +61,12 @@ plug "occivink/kakoune-filetree"
 plug "LogFlames/coderun.kak"
 # plug "alexherbo2/auto-pairs.kak"
 
+# plug "kak-lsp/kak-lsp" do %{
+    # cargo install --locked --force --path .
+# }
+
+# lsp-enable
+
 map global user 'f' ":filetree<ret>" -docstring "Open filetree buffer for current directory"
 face global FileTreeOpenFiles white,rgb:101050+b
 face global FileTreeDirName rgb:777777,default
@@ -155,6 +161,10 @@ map global user p '!xclip -o<ret>' -docstring "Paste from system clipboard"
 
 set-register t '	'
 map global user t '"tp' -docstring "Insert tab without expanding to spaces"
+
+hook global BufCreate .*\.html %{
+    alias buffer comment-line comment-block
+}
 
 
 # require-module auto-pairs

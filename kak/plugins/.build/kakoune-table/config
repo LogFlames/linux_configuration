@@ -1,0 +1,10 @@
+
+
+    # map global user t ": evaluate-commands -draft table-align<ret>" -docstring "Align table"
+
+    # map global user t ": table-enable<ret>" -docstring "Enable table mode"
+    # map global user T ": table-disable<ret>" -docstring "Disable table mode"
+    
+    # map global user t ": table-toggle<ret>" -docstring "Toggle table mode"
+    
+    map global user T ": enter-user-mode table<ret>" -docstring "Table"
