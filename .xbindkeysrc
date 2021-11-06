@@ -1,0 +1,13 @@
+# Increase volume
+
+# Decrease volume
+
+# Mute volume
+
+# Increase brightness
+"xrandr --output eDP-1 --brightness `(( xrandr --verbose --current | grep ^'eDP-1' -A5 | tail -c5 ; echo '+0.1') | tr -d '\n' ; echo ) | bc `"
+    XF86MonBrightnessUp
+
+# Decrease brightness
+"xrandr --output eDP-1 --brightness `(( xrandr --verbose --current | grep ^'eDP-1' -A5 | tail -c5 ; echo '-0.1') | tr -d '\n' ; echo ) | bc `"
+    XF86MonBrightnessDown
