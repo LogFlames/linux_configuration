@@ -6,6 +6,7 @@ rsync -a ~/.config/kitty ./ -r
 rsync -a ~/.config/kak ./ -r
 rsync -a ~/.config/htop ./ -r
 
+git diff
 git status
 
 read -p "Do you wish to push this to github? Enter the commit message, to NOT push press enter: " commit_msg
