@@ -32,7 +32,7 @@ fi
 # start some nice programs
 
 # CUSTOM ----
-if [ -d $HOME/.xbindkeysrc ]; then
+if [ -f $HOME/.xbindkeysrc ]; then
     xbindkeys
 fi
 # ----------
