@@ -313,8 +313,8 @@ globalkeys = gears.table.join(
 
      -- Prompt
     awful.key({ modkey },            "space",
-        function () awful.util.spawn("dmenu_run") end,
-              {description = "run dmenu", group = "launcher"}),
+        function () awful.spawn.with_shell("~/.local/bin/dmenu_run_aliases.sh &") end,
+              {description = "run dmenu with loaded aliases", group = "launcher"}),
 
     awful.key({ modkey },            "b",
         function () awful.util.spawn("brave") end,
