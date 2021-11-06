@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 
-cachedir=${XDG_CACHE_HOME:-"$HOME/.cache"}
-if [ -d "$cachedir" ]; then
-    cache=$cachedir/dmenu_run
-else
-    cache=$HOME/.dmenu_cache # if no xdg dir, fall back to dotfile in ~
-fi
-
 if [ -f ~/.bash_aliases ]; then
     aliases=( ~/.bash_aliases )
 fi
@@ -23,7 +16,7 @@ cmd=$(
         stest -flx $PATH
         alias | awk -F '[ =]' '{print $2}'
         compgen -A function
-    ) | sort -u | tee "$cache" | dmenu "$@"
+    ) | sort -u | dmenu "$@"
    )
 
 if [ -f ~/.bash_aliases ]; then
