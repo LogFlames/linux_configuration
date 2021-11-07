@@ -585,7 +585,9 @@ awful.spawn.with_shell("xinput set-prop \"SYNA2393:00 06CB:7A13 Touchpad\" \"lib
 awful.spawn.with_shell("xinput set-prop \"SYNA2393:00 06CB:7A13 Touchpad\" \"libinput Natural Scrolling Enabled\" 1")
 awful.spawn.with_shell("xinput set-prop \"SYNA2393:00 06CB:7A13 Touchpad\" \"libinput \" 1")
 
-awful.spawn.with_shell("xbindkeys")
+awful.spawn.with_shell("if ! pgrep xbindkeys; then xbindkeys; fi")
+
+awful.spawn.with_shell("xrandr --output eDP-1 --brightness 0.6")
 
 -- awful.spawn.with_shell("if ! pgrep xiccd ; then xiccd ; fi")
 -- awful.spawn.with_shell("icc-brightness watch")
