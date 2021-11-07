@@ -574,7 +574,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- gaps
-beautiful.useless_gap = 5
+beautiful.useless_gap = 6
 
 awful.spawn.with_shell("feh --no-fehbg --bg-scale --randomize ~/Pictures/BackgroundImages/currentRandom/*")
 awful.spawn.with_shell("emacs --daemon")
