@@ -599,5 +599,7 @@ awful.spawn.with_shell("if ! pgrep xbindkeys; then xbindkeys; fi")
 awful.spawn.with_shell("xrandr --output eDP-1 --brightness 0.6")
 awful.spawn.with_shell("amixer -c 0 set Master 20%")
 
+awful.spawn.with_shell("/home/elias/.config/polybar/launch.sh")
+
 -- awful.spawn.with_shell("if ! pgrep xiccd ; then xiccd ; fi")
 -- awful.spawn.with_shell("icc-brightness watch")

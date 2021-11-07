@@ -103,6 +103,9 @@ not appropriate in some cases like terminals."
 
 (add-hook 'vterm-mode-hook #'evil-collection-vterm-escape-stay)
 
+
+(set-background-color "#1c1c1c")
+
 ;;(set-frame-parameter (selected-frame) 'alpha '(<active> . <inactive>))
 ;;(set-frame-parameter (selected-frame) 'alpha <both>)
 (set-frame-parameter (selected-frame) 'alpha '(85 . 75))
@@ -120,6 +123,7 @@ not appropriate in some cases like terminals."
                100)
           '(85 . 75) '(100 . 100)))))
  (global-set-key (kbd "C-c t") 'toggle-transparency)
+
 
 (defvar hexcolor-keywords
   '(("#[[:xdigit:]]\\{6\\}"
