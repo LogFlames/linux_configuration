@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+echo "Moving to linux configuration directory"
+cd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 echo "Gathering config files"
 rsync -a ~/.config/awesome ./ -r
 rsync -a ~/.config/kitty ./ -r
