@@ -125,17 +125,17 @@ not appropriate in some cases like terminals."
  (global-set-key (kbd "C-c t") 'toggle-transparency)
 
 
-(defvar hexcolor-keywords
-  '(("#[[:xdigit:]]\\{6\\}"
-     (0 (put-text-property (match-beginning 0)
-                           (match-end 0)
-                           'face (list :background
-                                       (match-string-no-properties 0)))))))
+;; (defvar hexcolor-keywords
+;;   '(("#[[:xdigit:]]\\{6\\}"
+;;      (0 (put-text-property (match-beginning 0)
+;;                            (match-end 0)
+;;                            'face (list :background
+;;                                        (match-string-no-properties 0)))))))
 
-(defun hexcolor-add-to-font-look ()
-  (font-lock-add-keywords nil hexcolor-keywords))
+;; (defun hexcolor-add-to-font-look ()
+;;   (font-lock-add-keywords nil hexcolor-keywords))
 
-(add-hook 'prog-mode-hook 'hexcolor-add-to-font-look)
+;; (add-hook 'prog-mode-hook 'hexcolor-add-to-font-look)
 
 (add-hook 'company-mode-hook
           (lambda ()
@@ -143,6 +143,12 @@ not appropriate in some cases like terminals."
             (define-key company-active-map (kbd "TAB") 'company-complete-selection)
             (define-key company-active-map (kbd "<return>") nil)
             (define-key company-active-map (kbd "RET") nil)
+            ))
+
+(add-hook 'ivy-mode-hook
+          (lambda ()
+            (define-key ivy-minibuffer-map (kbd "<tab>") 'ivy-alt-done)
+            (define-key ivy-minibuffer-map (kbd "C-i") 'ivy-partial-or-done)
             ))
 
 ;; (projectile-add-known-project "~/code/python")
