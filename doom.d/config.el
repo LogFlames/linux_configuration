@@ -151,6 +151,13 @@ not appropriate in some cases like terminals."
             (define-key ivy-minibuffer-map (kbd "C-i") 'ivy-partial-or-done)
             ))
 
+(define-prefix-command 'multiedit-keymap)
+(define-key 'multiedit-keymap (kbd "c") 'mc/edit-lines)
+(define-key 'multiedit-keymap (kbd "b") 'mc/edit-beginnings-of-lines)
+(global-set-key (kbd "C-c m") 'multiedit-keymap)
+
+(global-set-key (kbd "U") 'evil-redo)
+
 ;; (projectile-add-known-project "~/code/python")
 
 
