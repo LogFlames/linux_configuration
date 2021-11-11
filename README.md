@@ -12,6 +12,10 @@ Place the rm_with_check.py file at a location of your choosing. Then add this co
 This comes with minial changes. The 'tilde' key now has an tilde on it. 
 > cp se_custom /usr/share/X11/xkb/symbols/se
 
+The second changed, `se_specark` is a bit more special. It contains some weirder keycombination, that, I hope, should be nice to use while programming. 
+
+A great utility while creating these layout are `xev | grep keysym`
+
 ## Awesome
 There are some awesome config files. 
 The config expects `dmenu_run_aliases.sh` to be in `.local/bin/dmenu_run_aliases.sh`. This scripts simply lanch dmenu but load the aliases before. 
