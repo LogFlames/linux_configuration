@@ -53,20 +53,20 @@ xkb_symbols "dvorak" {
 
     name[Group1]="Swedish (Dvorak)";
 
-    key <TLDE> { [     asciitilde,      tilde,    degree, 	]	};
+    key <TLDE> { [     asciitilde,      tilde,    degree 	]	};
 
-    key <AE01>  { [         1,     exclam, onesuperior] }
-    key <AE02>  { [         2,     slash, twosuperior] }
-    key <AE03>  { [         3,     numbersign, threesuperior] }
-    key <AE04>  { [         4,     percent] }
-    key <AE05>  { [         5,     ampersand] }
-    key <AE06>  { [         6,     currency] }
-    key <AE07>  { [         7,     bar] }
-    key <AE08>  { [         8,     parenleft] }
-    key <AE09>  { [         9,     parenright] }
-    key <AE10>  { [         0,     equal] }
-    key <AE11>  { [         plus,     question, plusminus] }
-    key <AE12>  { [         dead_acute,     dead_grave] }
+    key <AE01>  { [         1,     exclam, onesuperior	] };
+    key <AE02>  { [         2,     slash, twosuperior	] };
+    key <AE03>  { [         3,     numbersign, threesuperior	] };
+    key <AE04>  { [         4,     percent	] };
+    key <AE05>  { [         5,     ampersand	] };
+    key <AE06>  { [         6,     currency	] };
+    key <AE07>  { [         7,     bar	] };
+    key <AE08>  { [         8,     parenleft	] };
+    key <AE09>  { [         9,     parenright	] };
+    key <AE10>  { [         0,     equal	] };
+    key <AE11>  { [         plus,     question, plusminus	] };
+    key <AE12>  { [         dead_acute,     dead_grave	] };
 
     key <AD01> { [apostrophe,   quotedbl,     asterisk,     asterisk ]	};
     key <AD02> { [    period,      colon,           at,           at ]	};
@@ -87,13 +87,13 @@ xkb_symbols "dvorak" {
     key <AC02> { [         o,          O,   odiaeresis,   Odiaeresis ]	};
     key <AC03> { [         e,          E,   adiaeresis,   Adiaeresis ]	};
     key <AC04> { [         u,          U,           mu,           Mu ]	};
-    key <AC05> { [         i,          I,   ]	};
-    key <AC06> { [         d,          D,   ]	};
-    key <AC07> { [         h,          H,   ]	};
-    key <AC08> { [         t,          T,   ]	};
-    key <AC09> { [         n,          N,   ]	};
-    key <AC10> { [         s,          S,   ]	};
-    key <AC11> { [     minus, underscore,   ]   };
+    key <AC05> { [         i,          I   ]	};
+    key <AC06> { [         d,          D   ]	};
+    key <AC07> { [         h,          H   ]	};
+    key <AC08> { [         t,          T   ]	};
+    key <AC09> { [         n,          N   ]	};
+    key <AC10> { [         s,          S   ]	};
+    key <AC11> { [     minus, underscore   ]   };
     key <BKSL> { [ backslash,    section ]	};
 
     key <LSGT> { [      less,    greater,  Greek_alpha,   Greek_Alpha   ]  };
