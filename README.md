@@ -14,7 +14,7 @@ This comes with minial changes. The 'tilde' key now has an tilde on it.
 
 The second changed, `se_specark` is a bit more special. It contains some weirder keycombination, that, I hope, should be nice to use while programming. 
 
-A great utility while creating these layout are `xev | grep keysym`
+A great utility while creating these layout are `xev | grep keysym` and the website [Table of keysyms in X11](https://www.oreilly.com/library/view/xlib-reference-manual/9780937175262/16_appendix-h.html)
 
 ## Awesome
 There are some awesome config files. 
