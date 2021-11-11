@@ -154,6 +154,11 @@ not appropriate in some cases like terminals."
 (define-prefix-command 'multiedit-keymap)
 (define-key 'multiedit-keymap (kbd "c") 'mc/edit-lines)
 (define-key 'multiedit-keymap (kbd "b") 'mc/edit-beginnings-of-lines)
+(define-key 'multiedit-keymap (kbd "1") 'mc/insert-numbers)
+(define-key 'multiedit-keymap (kbd "v") 'mc/vertical-align-with-space)
+(define-key 'multiedit-keymap (kbd "a") 'mc/mark-all-dwim)
+(define-key 'multiedit-keymap (kbd "n") 'mc/mark-next-lines)
+(define-key 'multiedit-keymap (kbd "p") 'mc/mark-previous-lines)
 (global-set-key (kbd "C-c m") 'multiedit-keymap)
 
 (global-set-key (kbd "U") 'evil-redo)

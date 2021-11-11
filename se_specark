@@ -83,30 +83,30 @@ xkb_symbols "dvorak" {
 
 // TODO: Continue here - 20211110
 
-    key <AC01> { [         a,          A,           ae,           AE ]	};
-    key <AC02> { [         o,          O,           oe,           OE ]	};
-    key <AC03> { [         e,          E,     EuroSign,         cent ]	};
-    key <AC04> { [         u,          U,    downarrow,      uparrow ]	};
-    key <AC05> { [         i,          I,   rightarrow,     idotless ]	};
-    key <AC06> { [         d,          D,          eth,          ETH ]	};
-    key <AC07> { [         h,          H,      hstroke,      Hstroke ]	};
-    key <AC08> { [         t,          T,       tslash,       Tslash ]	};
-    key <AC09> { [         n,          N ]	};
-    key <AC10> { [         s,          S,       ssharp,      section ]	};
-    key <AC11> { [     minus, underscore, dead_belowdot, dead_abovedot ] };
-    key <BKSL>	{ [apostrophe,   asterisk,        acute,     multiply ]	};
+    key <AC01> { [         a,          A,        aring,        Aring ]	};
+    key <AC02> { [         o,          O,   odiaeresis,   Odiaeresis ]	};
+    key <AC03> { [         e,          E,   adiaeresis,   Adiaeresis ]	};
+    key <AC04> { [         u,          U,           mu,           Mu ]	};
+    key <AC05> { [         i,          I,   ]	};
+    key <AC06> { [         d,          D,   ]	};
+    key <AC07> { [         h,          H,   ]	};
+    key <AC08> { [         t,          T,   ]	};
+    key <AC09> { [         n,          N,   ]	};
+    key <AC10> { [         s,          S,   ]	};
+    key <AC11> { [     minus, underscore,   ]   };
+    key <BKSL> { [ backslash,    section ]	};
 
-    key <LSGT>  { [      less,     greater,         bar,    brokenbar ] };
-    key <AB01> { [    period,   colon, periodcentered, dead_abovedot ]	};
-    key <AB02> { [         q,          Q,           at,  Greek_OMEGA ]	};
-    key <AB03> { [         j,          J ]	};
-    key <AB04> { [         k,          K,          kra,    ampersand ]	};
-    key <AB05> { [         x,          X, guillemotright,    greater ]	};
-    key <AB06> { [         b,          B, rightdoublequotemark, apostrophe ] };
-    key <AB07> { [         m,          M,           mu,    masculine ]	};
-    key <AB08> { [         w,          W,      lstroke,      Lstroke ]	};
-    key <AB09> { [         v,          V, leftdoublequotemark, grave ]	};
-    key <AB10> { [         z,          Z, guillemotleft,        less ]	};
+    key <LSGT> { [      less,    greater,  Greek_alpha,   Greek_Alpha   ]  };
+    key <AB01> { [ braceleft,bracketleft,  Greek_beta,    Greek_Beta    ]  };
+    key <AB02> { [         q,          Q,  Greek_gamma,   Greek_Gamma   ]  };
+    key <AB03> { [         j,          J,  Greek_delta,   Greek_Delta   ]  };
+    key <AB04> { [         k,          K,  Greek_epsilon, Greek_Epsilon ]  };
+    key <AB05> { [braceright,bracketright, Greek_theta,   Greek_Theta   ]  };
+    key <AB06> { [         b,          B,  Greek_lambda,  Greek_Lambda  ]  };
+    key <AB07> { [         m,          M,  Greek_rho,     Greek_Rho     ]  };
+    key <AB08> { [         w,          W,  Greek_sigma,   Greek_Sigma   ]  };
+    key <AB09> { [         v,          V,  Greek_phi,     Greek_Phi     ]  };
+    key <AB10> { [         z,          Z,  Greek_omega,   Greek_Omega   ]  };
 };
 
 // Ivan Popov, 2005-07-17
