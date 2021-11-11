@@ -585,6 +585,8 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- gaps
 beautiful.useless_gap = 6
 
+awful.spawn.with_shell("if ! pgrep xbindkeys; then xbindkeys; fi")
+
 awful.spawn.with_shell("feh --no-fehbg --bg-scale --randomize ~/Pictures/BackgroundImages/currentRandom/*")
 awful.spawn.with_shell("emacs --daemon")
 awful.spawn.with_shell("compton -D 1 --no-fading-openclose --vsync")
@@ -597,8 +599,6 @@ awful.spawn.with_shell("xinput set-prop \"SYNA2393:00 06CB:7A13 Touchpad\" \"lib
 awful.spawn.with_shell("xinput set-prop \"SYNA2393:00 06CB:7A13 Touchpad\" \"libinput Tapping Enabled\" 1")
 awful.spawn.with_shell("xinput set-prop \"SYNA2393:00 06CB:7A13 Touchpad\" \"libinput Natural Scrolling Enabled\" 1")
 awful.spawn.with_shell("xinput set-prop \"SYNA2393:00 06CB:7A13 Touchpad\" \"libinput \" 1")
-
-awful.spawn.with_shell("killall -q kbindkeys; xbindkeys")
 
 awful.spawn.with_shell("xrandr --output eDP-1 --brightness 0.6")
 awful.spawn.with_shell("amixer -c 0 set Master 20%")
