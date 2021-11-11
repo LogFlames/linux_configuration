@@ -18,7 +18,9 @@ A great utility while creating these layout are `xev | grep keysym` and the webs
 
 ## Awesome
 There are some awesome config files. 
-The config expects `dmenu_run_aliases.sh` to be in `.local/bin/dmenu_run_aliases.sh`. This scripts simply lanch dmenu but load the aliases before. 
+The config expects `dmenu_run_aliases.sh` to be in `.local/bin/dmenu_run_aliases.sh`. This scripts simply lanch dmenu but load the aliases before.
+
+In connection with awesome you might also want to use [slock](https://tools.suckless.org/slock/). The service file is in the repo which can be enabled by `systemctl enable slock@user`.
 
 ## Remove 'Tapping Drag'
 There are used more in my awesome config. To enable tapping and so on, same principle. 
