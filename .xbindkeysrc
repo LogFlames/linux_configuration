@@ -1,8 +1,14 @@
-# Increase volume
+# # Increase volume
+# "amixer -c 0 set Master 1%+"
+#     XF86AudioRaiseVolume
 
-# Decrease volume
+# # Decrease volume
+# "amixer -c 0 set Master 1%-"
+#     XF86AudioLowerVolume
 
-# Mute volume
+# # Mute volume
+# "amixer -c 0 set Master toggle"
+#     XF86AudioMute
 
 # Increase brightness
 "xrandr --output eDP-1 --brightness `(( echo '('; xrandr --verbose --current | grep ^'eDP-1' -A5 | tail -c5 ; echo '+0.1+1.1) % 1.1') | tr -d '\n' ; echo ) | bc `"
