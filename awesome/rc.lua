@@ -600,7 +600,7 @@ awful.spawn.with_shell("xinput set-prop \"SYNA2393:00 06CB:7A13 Touchpad\" \"lib
 awful.spawn.with_shell("xinput set-prop \"SYNA2393:00 06CB:7A13 Touchpad\" \"libinput Natural Scrolling Enabled\" 1")
 awful.spawn.with_shell("xinput set-prop \"SYNA2393:00 06CB:7A13 Touchpad\" \"libinput \" 1")
 
-awful.spawn.with_shell("xrandr --output eDP-1 --brightness 0.6")
+awful.spawn.with_shell("xrandr --output eDP1 --brightness 0.6")
 awful.spawn.with_shell("amixer -c 0 set Master 20%")
 
 
