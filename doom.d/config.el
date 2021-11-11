@@ -161,7 +161,7 @@ not appropriate in some cases like terminals."
 (define-key 'multiedit-keymap (kbd "p") 'mc/mark-previous-lines)
 (global-set-key (kbd "C-c m") 'multiedit-keymap)
 
-(global-set-key (kbd "U") 'evil-redo)
+(evil-define-key 'normal 'global "U" 'evil-redo)
 
 ;; (projectile-add-known-project "~/code/python")
 
