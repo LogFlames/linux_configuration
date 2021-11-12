@@ -89,6 +89,19 @@
             (set 'tab-width 4)
             nil t))
 
+;; (add-hook 'html-mode-hook
+;;           (lambda ()
+;;             (set 'prettify-symbols-alist (default-value 'prettify-symbols-alist))
+;;             (delete '("x" 57707) prettify-symbols-alist)
+;;             (set 'tab-width 4)
+;;             nil t))
+
+(add-hook 'js-mode-hook
+          (lambda ()
+            (set 'js--prettify-symbols-alist (default-value 'prettify-symbols-alist))
+            (set 'prettify-symbols-alist (default-value 'prettify-symbols-alist))
+            ))
+
 (setq +ligatures-in-modes t)
 
 (add-hook 'vterm-mode-hook
@@ -103,13 +116,12 @@ not appropriate in some cases like terminals."
 
 (add-hook 'vterm-mode-hook #'evil-collection-vterm-escape-stay)
 
-
-(set-background-color "#1c1c1c")
+(set-background-color "gray11") ; #1c1c1c
 
 ;;(set-frame-parameter (selected-frame) 'alpha '(<active> . <inactive>))
 ;;(set-frame-parameter (selected-frame) 'alpha <both>)
-(set-frame-parameter (selected-frame) 'alpha '(85 . 75))
-(add-to-list 'default-frame-alist '(alpha . (85 . 75)))
+(set-frame-parameter (selected-frame) 'alpha '(85 . 70))
+(add-to-list 'default-frame-alist '(alpha . (85 . 70)))
 
 (defun toggle-transparency ()
    (interactive)
@@ -121,7 +133,7 @@ not appropriate in some cases like terminals."
                      ;; Also handle undocumented (<active> <inactive>) form.
                      ((numberp (cadr alpha)) (cadr alpha)))
                100)
-          '(85 . 75) '(100 . 100)))))
+          '(85 . 70) '(100 . 100)))))
  (global-set-key (kbd "C-c t") 'toggle-transparency)
 
 
