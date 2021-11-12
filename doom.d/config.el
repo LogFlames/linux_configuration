@@ -86,6 +86,7 @@
           (lambda ()
             (set 'prettify-symbols-alist (default-value 'prettify-symbols-alist))
             (delete '("x" 57707) prettify-symbols-alist)
+            (delete '("None" "∅") prettify-symbols-alist)
             (set 'tab-width 4)
             nil t))
 
@@ -160,7 +161,9 @@ not appropriate in some cases like terminals."
 (add-hook 'ivy-mode-hook
           (lambda ()
             (define-key ivy-minibuffer-map (kbd "<tab>") 'ivy-alt-done)
+            (define-key ivy-minibuffer-map (kbd "TAB") 'ivy-alt-done)
             (define-key ivy-minibuffer-map (kbd "C-i") 'ivy-partial-or-done)
+            (define-key ivy-minibuffer-map (kbd "RET") 'ivy-immediate-done)
             ))
 
 (define-prefix-command 'multiedit-keymap)
