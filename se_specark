@@ -45,6 +45,7 @@ xkb_symbols "nodeadkeys" {
     key <AE12>	{ [     acute,      grave,    plusminus,      notsign ]	};
 };
 
+// Specark
 // Swedish Dvorak
 partial alphanumeric_keys
 xkb_symbols "dvorak" {
@@ -55,18 +56,18 @@ xkb_symbols "dvorak" {
 
     key <TLDE> { [     asciitilde,      tilde,    degree 	]	};
 
-    key <AE01>  { [         1,     exclam, onesuperior	] };
-    key <AE02>  { [         2,     slash, twosuperior	] };
-    key <AE03>  { [         3,     numbersign, threesuperior	] };
-    key <AE04>  { [         4,     percent	] };
-    key <AE05>  { [         5,     ampersand	] };
-    key <AE06>  { [         6,     currency	] };
-    key <AE07>  { [         7,     bar	] };
-    key <AE08>  { [         8,     parenleft	] };
-    key <AE09>  { [         9,     parenright	] };
-    key <AE10>  { [         0,     equal	] };
-    key <AE11>  { [         plus,     question, plusminus	] };
-    key <AE12>  { [         dead_acute,     dead_grave	] };
+    key <AE01>  { [         1,     exclam,     onesuperior,   1] };
+    key <AE02>  { [         2,     slash,      twosuperior,   2] };
+    key <AE03>  { [         3,     numbersign, threesuperior, 3] };
+    key <AE04>  { [         4,     percent,    4,             4] };
+    key <AE05>  { [         5,     ampersand,  5,             5] };
+    key <AE06>  { [         6,     currency,   6,             6] };
+    key <AE07>  { [         7,     bar,        7,             7] };
+    key <AE08>  { [         8,     parenleft,  8,             8] };
+    key <AE09>  { [         9,     parenright, 9,             9] };
+    key <AE10>  { [         0,     equal,      0,             0] };
+    key <AE11>  { [         plus,     question, plusminus ] };
+    key <AE12>  { [         dead_acute,     dead_grave ] };
 
     key <AD01> { [apostrophe,   quotedbl,     asterisk,     asterisk ]	};
     key <AD02> { [    period,      colon,           at,           at ]	};
