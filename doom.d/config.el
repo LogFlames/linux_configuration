@@ -77,7 +77,7 @@
 (setq company-idle-delay 0.05)
 (setq company-minimum-prefix-length 3)
 
-(let ((ligatures-to-disable '(:true :false :int :float :str :bool :list :and :or :for :not :def)))
+(let ((ligatures-to-disable '(:true :false :int :float :str :bool :list :and :or :for :not :def :null)))
   (dolist (sym ligatures-to-disable)
     (plist-put! +ligatures-extra-symbols sym nil)))
 
@@ -86,7 +86,6 @@
           (lambda ()
             (set 'prettify-symbols-alist (default-value 'prettify-symbols-alist))
             (delete '("x" 57707) prettify-symbols-alist)
-            (delete '("None" "∅") prettify-symbols-alist)
             (set 'tab-width 4)
             nil t))
 
