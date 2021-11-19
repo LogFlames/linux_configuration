@@ -89,6 +89,11 @@
             (set 'tab-width 4)
             nil t))
 
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (delete '("x" 57707) prettify-symbols-alist)
+            nil t))
+
 ;; (add-hook 'html-mode-hook
 ;;           (lambda ()
 ;;             (set 'prettify-symbols-alist (default-value 'prettify-symbols-alist))
