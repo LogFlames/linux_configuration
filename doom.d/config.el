@@ -182,6 +182,13 @@ not appropriate in some cases like terminals."
 
 (evil-define-key 'normal 'global "U" 'evil-redo)
 
+(defun replace-buffer-with-clipboard ()
+  (interactive)
+  (delete-region (point-min) (point-max))
+  (yank))
+
+(global-set-key (kbd "C-c r") 'replace-buffer-with-clipboard)
+
 ;; (projectile-add-known-project "~/code/python")
 
 
