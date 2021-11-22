@@ -11,6 +11,7 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 alias l='ls --color'
+alias ls='ls --color\'
 alias la='ls -A --color'
 alias lsa='ls -a --color'
 alias ll='ls -l --color'
