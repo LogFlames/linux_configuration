@@ -10,7 +10,7 @@ using namespace std;
 #define deb(x) cout << #x << " = " << x << endl;
 #define deb2(x, y) cout << #x << " = " << x << ", " << #y << " = " << y << endl;
 #define debv(a) cout << #a << ": [ "; rep(i,0,sz(a)) { cout << a[i] << " "; } cout << "]" << endl;
-#define gtoez(a, b) ((a) > 0 ? (b) : 0)
+#define gtz(a, b) ((a) > 0 ? (b) : 0)
 #define pb push_back
 #define un_map unordered_map
 #define un_set unordered_set
