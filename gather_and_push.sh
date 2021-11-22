@@ -11,6 +11,8 @@ rsync -a ~/.config/kak ./ -r
 rsync -a ~/.config/htop ./ -r
 rsync -a ~/.doom.d/* ./doom.d -r
 rsync -a ~/code/competative_programming4/template.cpp ./template.cpp
+rsync -a ~/.zshrc ./ -r
+rsync -a ~/.bash_aliases ./ -r
 
 git diff
 git status
