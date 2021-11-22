@@ -10,11 +10,11 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-alias l='ls --color'
-alias ls='ls --color\'
-alias la='ls -A --color'
-alias lsa='ls -a --color'
-alias ll='ls -l --color'
+alias l='ls'
+alias ls='ls --color'
+alias la='ls -A'
+alias lsa='ls -a'
+alias ll='ls -l'
 
 alias p='python3'
 alias vim=nvim
