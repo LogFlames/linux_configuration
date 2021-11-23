@@ -7,9 +7,9 @@ using namespace std;
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
 #define sz(x) (int)(x).size()
-#define deb(x) cout << #x << " = " << (x) << endl;
-#define deb2(x, y) cout << #x << " = " << (x) << ", " << #y << " = " << (y) << endl;
-#define debv(a) cout << #a << ": [ "; trav(i,(a)) { cout << i << " "; } cout << "]" << endl;
+#define deb(x) cout << #x << " = " << (x) << endl
+#define deb2(x, y) cout << #x << " = " << (x) << ", " << #y << " = " << (y) << endl
+#define debv(a) cout << #a << ": [ "; trav(i,(a)) { cout << i << " "; } cout << "]" << endl
 #define gtz(a, b) ((a) > 0 ? (b) : 0)
 #define pb push_back
 #define un_map unordered_map
