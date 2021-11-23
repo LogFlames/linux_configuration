@@ -15,11 +15,11 @@ rsync -a ~/.zshrc ./ -r
 rsync -a ~/.bash_aliases ./ -r
 
 git diff
+git add .
 git status
 
 read -p "Do you wish to push this to github? Enter the commit message, to NOT push press enter: " commit_msg
 if [[ ! $commit_msg = "" ]]; then
-    git add .
     git commit -m "$commit_msg"
     git push
 else
