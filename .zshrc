@@ -35,6 +35,11 @@ alias grep='rg'
 alias icat="kitty +kitten icat"
 alias diff="kitty +kitten diff"
 
+# Run once to create the container
+alias create-foxy='docker run -d --network host --name foxy --volume ~/docker_volume:/docke
+# Attach to the container once it's started
+alias foxy='docker exec -it foxy bash'
+
 # To place inside .bashrc
 # if [ -f ~/.bash_aliases ]; then
 #     . ~/.bash_aliases

@@ -27,6 +27,11 @@ alias diff="kitty +kitten diff"
 #     . ~/.bash_aliases
 # fi
 
+# Run once to create the container
+alias create-foxy='docker run -d --network host --name foxy --volume ~/docker_volume:/docke
+# Attach to the container once it's started
+alias foxy='docker exec -it foxy bash'
+
 FCEDIT=kak
 VISUAL=kak
 EDITOR=kak
