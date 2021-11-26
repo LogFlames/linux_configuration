@@ -12,9 +12,9 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 alias l='ls'
 alias ls='ls --color'
-alias la='ls -A'
+alias la='ls -a'
 alias lsa='ls -a'
-alias ll='ls -l'
+alias ll='ls -lha'
 
 alias p='python3'
 alias vim=nvim
@@ -195,3 +195,18 @@ export CODERUN_for="$CODERUN_f"
 export CODERUN_f90="$CODERUN_f"
 
 export TERM=xterm-256color
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/elias/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/elias/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/elias/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/elias/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<

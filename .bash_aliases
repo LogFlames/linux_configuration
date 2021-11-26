@@ -1,7 +1,7 @@
 alias l='ls'
-alias la='ls -A'
+alias la='ls -a'
 alias lsa='ls -a'
-alias ll='ls -l'
+alias ll='ls -lha'
 
 alias p='python3'
 alias vim=nvim
