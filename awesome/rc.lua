@@ -330,6 +330,13 @@ globalkeys = gears.table.join(
         function () awful.util.spawn("emacsclient --create-frame --alternate-editor=\"\"") end,
               {description = "Open an emacs client", group = "launcher"}),
 
+    awful.key({ modkey, "Shift" },  "Return",
+        function ()
+            awful.spawn(terminal)
+            awful.util.spawn("brave")
+            awful.util.spawn("emacsclient --create-frame --alternate-editor=\"\"") end,
+              {description = "Setup coding environment - terminal, emacs and browser", group = "launcher"}),
+
     awful.key({ modkey },            "Escape",
         function() awful.util.spawn("slock") end,
              {description = "Lock screen with slock", group = "awesome"}),
