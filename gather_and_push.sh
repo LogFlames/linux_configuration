@@ -12,6 +12,8 @@ rsync -a ~/.config/htop ./ -r
 rsync -a ~/.doom.d/* ./doom.d -r
 rsync -a ~/.zshrc ./ -r
 rsync -a ~/.bash_aliases ./ -r
+rsync -a ~/.xbindkeysrc ./
+rsync -a ~/.aliases ./aliases -r
 
 git diff
 git add .
