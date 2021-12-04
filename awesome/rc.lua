@@ -603,8 +603,8 @@ awful.spawn.with_shell("emacs --daemon")
 awful.spawn.with_shell("picom -D 1 --no-fading-openclose --vsync")
 
 awful.spawn.with_shell("/home/elias/.config/polybar/launch.sh")
--- awful.spawn.with_shell("killall -q kmix; kmix")
--- awful.spawn.with_shell("killall -q nm-applet; nm-applet")
+awful.spawn.with_shell("killall -q pa-applet; pa-applet")
+awful.spawn.with_shell("killall -q nm-applet; nm-applet")
 
 awful.spawn.with_shell("xinput set-prop \"SYNA2393:00 06CB:7A13 Touchpad\" \"libinput Tapping Drag Enabled\" 0")
 awful.spawn.with_shell("xinput set-prop \"SYNA2393:00 06CB:7A13 Touchpad\" \"libinput Tapping Enabled\" 1")

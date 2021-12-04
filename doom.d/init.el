@@ -18,10 +18,10 @@
 
 (add-hook 'after-init-hook
           (lambda ()
-            (setq gc-cons-threshold 1000000)
+            (setq gc-cons-threshold 10000000)
             (message "gc-cons-threashold restored to %s" gc-cons-threshold)
             ))
-(setq gc-cons-threshold 10000000)
+(setq gc-cons-threshold 40000000)
 
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
@@ -33,11 +33,11 @@
        ;;layout            ; auie,ctsrnm is the superior home row
 
        :completion
-       company           ; the ultimate code completion backend
-       ;; helm              ; the *other* search engine for love and life
-       ;;ido               ; the other *other* search engine...
-       (ivy +fuzzy)              ; a search engine for love and life
-       (vertico +icons)           ; the search engine of the future
+       company            ; the ultimate code completion backend
+       ;;helm             ; the *other* search engine for love and life
+       ;;ido              ; the other *other* search engine...
+       (ivy)              ; a search engine for love and life
+       (vertico +icons)   ; the search engine of the future
 
        :ui
        ;;deft              ; notational velocity for Emacs
