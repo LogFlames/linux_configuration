@@ -51,6 +51,7 @@
 (setq-default c-default-style "linux"
               c-basic-offset 4)
 
+
 (defun prog-custom-settings ()
   (setq tab-width 4)
   (setq c-basic-offset 4))
@@ -77,7 +78,7 @@
 (setq company-idle-delay 0.05)
 (setq company-minimum-prefix-length 3)
 
-(let ((ligatures-to-disable '(:true :false :int :float :str :bool :list :and :or :for :not :def :null)))
+(let ((ligatures-to-disable '(:true :false :int :float :str :bool :list :and :or :for :not :def :null :return :require)))
   (dolist (sym ligatures-to-disable)
     (plist-put! +ligatures-extra-symbols sym nil)))
 

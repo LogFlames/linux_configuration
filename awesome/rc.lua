@@ -598,8 +598,8 @@ beautiful.useless_gap = 6
 
 awful.spawn.with_shell("if ! pgrep xbindkeys; then xbindkeys; fi")
 
--- awful.spawn.with_shell("feh --no-fehbg --bg-scale --randomize ~/Pictures/BackgroundImages/currentRandom/*")
--- awful.spawn.with_shell("emacs --daemon")
+awful.spawn.with_shell("feh --no-fehbg --bg-scale --randomize ~/Pictures/BackgroundImages/currentRandom/*")
+awful.spawn.with_shell("emacs --daemon")
 awful.spawn.with_shell("picom -D 1 --no-fading-openclose --vsync")
 
 awful.spawn.with_shell("/home/elias/.config/polybar/launch.sh")

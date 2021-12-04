@@ -26,6 +26,9 @@ source ~/.aliases
 
 export PATH=/home/elias/.emacs.d/bin:$PATH
 export PATH=/home/elias/.local/bin:$PATH
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+
+export SHELL=zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
