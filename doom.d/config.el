@@ -78,7 +78,7 @@
 (setq company-idle-delay 0.05)
 (setq company-minimum-prefix-length 3)
 
-(let ((ligatures-to-disable '(:true :false :int :float :str :bool :list :and :or :for :not :def :null :return :require)))
+(let ((ligatures-to-disable '(:true :false :int :float :str :bool :list :and :or :for :not :def :null :return :require :import)))
   (dolist (sym ligatures-to-disable)
     (plist-put! +ligatures-extra-symbols sym nil)))
 
@@ -91,6 +91,11 @@
             nil t))
 
 (add-hook 'c-mode-common-hook
+          (lambda ()
+            (delete '("x" 57707) prettify-symbols-alist)
+            nil t))
+
+(add-hook 'rjsx-mode-hook
           (lambda ()
             (delete '("x" 57707) prettify-symbols-alist)
             nil t))
