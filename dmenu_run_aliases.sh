@@ -7,8 +7,8 @@ else
     cache=$HOME/.dmenu_cache
 fi
 
-if [ -f ~/.bash_aliases ]; then
-    aliases=( ~/.bash_aliases )
+if [ -f ~/.aliases ]; then
+    aliases=( ~/.aliases )
 fi
 
 if [ -f ~/.bash_functions ]; then
@@ -24,15 +24,15 @@ IFS=:
         stest -flx $PATH
         alias | awk -F '[ =]' '{print $2}'
         compgen -A function
-        ) | sort -u | tee "$cache" | dmenu "$@"
+        ) | sort -u | tee "$cache" | dmenu "$@" | ${SHELL:-"/bin/sh"} &
     else
         dmenu "$@" < "$cache"
     fi
    )`
 
-if [ -f ~/.bash_aliases ]; then
+if [ -f ~/.aliases ]; then
     if [ ! -z "$(grep '^alias' $aliases|cut -d'=' -f1|grep $cmd)" ] || [ -z $(which $cmd) ]; then
-        echo -e "source ~/.bash_aliases \n $cmd" | bash -O expand_aliases &
+        echo -e "source ~/.aliases \n $cmd" | bash -O expand_aliases &
     else
         exec $cmd &
     fi
