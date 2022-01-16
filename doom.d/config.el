@@ -78,6 +78,8 @@
 (setq company-idle-delay 0.05)
 (setq company-minimum-prefix-length 3)
 
+(setq +ligatures-extras-in-modes nil)
+
 (let ((ligatures-to-disable '(:true :false :int :float :str :bool :list :and :or :for :not :def :null :return :require :import)))
   (dolist (sym ligatures-to-disable)
     (plist-put! +ligatures-extra-symbols sym nil)))
