@@ -11,9 +11,9 @@
 #     XF86AudioMute
 
 # Increase brightness
-"xrandr --output eDP-1 --brightness `(( echo '('; xrandr --verbose --current | grep ^'eDP-1' -A5 | tail -c5 ; echo '+0.1+1.1) % 1.1') | tr -d '\n'; echo ) | bc `"
+"xrandr --output eDP1 --brightness `(( echo '('; xrandr --verbose --current | grep ^'eDP1' -A5 | tail -c5 ; echo '+0.1+1.1) % 1.1') | tr -d '\n'; echo ) | bc `"
     XF86MonBrightnessUp
 
 # Decrease brightness
-"xrandr --output eDP-1 --brightness `(( echo '('; xrandr --verbose --current | grep ^'eDP-1' -A5 | tail -c5 ; echo '-0.1+1.1) % 1.1') | tr -d '\n'; echo ) | bc `"
+"xrandr --output eDP1 --brightness `(( echo '('; xrandr --verbose --current | grep ^'eDP1' -A5 | tail -c5 ; echo '-0.1+1.1) % 1.1') | tr -d '\n'; echo ) | bc `"
     XF86MonBrightnessDown

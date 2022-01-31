@@ -326,6 +326,14 @@ globalkeys = gears.table.join(
         function () awful.util.spawn("brave") end,
               {description = "Open brave", group = "launcher"}),
 
+    awful.key({ modkey },            "k",
+        function () awful.util.spawn("slack") end,
+              {description = "Open Slack", group = "launcher"}),
+
+    awful.key({ modkey },            "m",
+        function () awful.util.spawn("firefox") end,
+              {description = "Open Firefox", group = "launcher"}),
+
     awful.key({ modkey },            "r",
         function () awful.util.spawn("emacsclient --create-frame --alternate-editor=\"\"") end,
               {description = "Open an emacs client", group = "launcher"}),
