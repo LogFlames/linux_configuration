@@ -54,7 +54,8 @@
 
 (defun prog-custom-settings ()
   (setq tab-width 4)
-  (setq c-basic-offset 4))
+  (setq c-basic-offset 4)
+  (setq lsp-enable-indentation nil))
 
 (add-hook 'prog-mode-hook 'prog-custom-settings)
 
