@@ -344,7 +344,8 @@ globalkeys = gears.table.join(
              {description = "Lock screen with slock", group = "awesome"}),
 
     awful.key({ modkey },            "a",
-        function() xrandr.xrandr() end),
+        function() xrandr.xrandr() end,
+             {description = "Change monitor setup", group = "multi monitor"}),
 
     -- BAR REMOVAL
     -- awful.key({ modkey }, "x",
