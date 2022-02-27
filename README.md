@@ -43,3 +43,8 @@ There are used more in my awesome config. To enable tapping and so on, same prin
 ~~ICC-Brightness~~
 This is now done via .xbacklight script, that uses xrandr and some awk (I really should learn it :)) to add or reduce the current brightness.
 It currently does so in steps of 0.1 between 0 and 1 and loops at the edges. 
+
+## Emacs
+Install emacs vs 28 (as of 2022-02-27) with native compilation
+[https://www.emacswiki.org/emacs/GccEmacs#h5o-5](https://www.emacswiki.org/emacs/GccEmacs#h5o-5)
+Then add the doom configuration
