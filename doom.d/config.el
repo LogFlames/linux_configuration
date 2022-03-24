@@ -50,11 +50,13 @@
               indent-tabs-mode nil)
 (setq-default c-default-style "linux"
               c-basic-offset 4)
+(setq-default js-indent-level 4)
 
 
 (defun prog-custom-settings ()
   (setq tab-width 4)
   (setq c-basic-offset 4)
+  (setq js-indent-level 4)
   (setq lsp-enable-indentation nil))
 
 (add-hook 'prog-mode-hook 'prog-custom-settings)
