@@ -16,6 +16,7 @@ rsync -a ~/.xbindkeysrc ./
 rsync -a ~/.aliases ./aliases -r
 rsync -a ~/.local/bin/dmenu_run_aliases.sh ./dmenu_run_aliases.sh -r
 rsync -a ~/.zshrc ./zshrc
+rsync -a ~/.p10k.zsh p10k.zsh
 
 git diff
 git add .
