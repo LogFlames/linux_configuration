@@ -47,4 +47,10 @@ It currently does so in steps of 0.1 between 0 and 1 and loops at the edges.
 ## Emacs
 Install emacs vs 28 (as of 2022-02-27) with native compilation
 [https://www.emacswiki.org/emacs/GccEmacs#h5o-5](https://www.emacswiki.org/emacs/GccEmacs#h5o-5)
-Then add the doom configuration
+Then add the doom configuration [https://github.com/hlissner/doom-emacs](https://github.com/hlissner/doom-emacs).
+
+## Zsh
+
+[https://ohmyz.sh/#install](https://ohmyz.sh/#install)
+Install syntax highlighting plugin, place in `$ZSH_CUSTOM/plugins`
+[https://github.com/zsh-users/zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)

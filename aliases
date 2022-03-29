@@ -3,6 +3,9 @@ alias l='ls'
 alias la='ls -a'
 alias lsa='ls -a'
 alias ll='ls -lha'
+alias c='clear'
+
+alias doas="doas "
 
 alias p='python3'
 alias vim=nvim
@@ -19,6 +22,10 @@ alias jobs='jobs -l'
 
 alias R='R -q'
 alias grep='rg'
+
+alias cless="colorize_less"
+alias ccat="colorize_cat"
+
 
 alias icat="kitty +kitten icat"
 alias diff="kitty +kitten diff"
