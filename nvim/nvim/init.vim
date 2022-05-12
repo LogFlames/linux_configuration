@@ -37,6 +37,9 @@ let g:coc_global_extensions = [
   \ 'coc-clangd',
   \ ]
 
+" Remap for rename current word
+nmap <silent> gcr <Plug>(coc-rename)
+
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
