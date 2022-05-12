@@ -35,6 +35,7 @@ let g:coc_global_extensions = [
   \ 'coc-html',
   \ 'coc-pyright',
   \ 'coc-clangd',
+  \ 'coc-r-lsp',
   \ ]
 
 " Remap for rename current word
