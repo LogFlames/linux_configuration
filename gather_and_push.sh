@@ -11,7 +11,6 @@ rsync -a ~/.config/kak ./ -r
 rsync -a ~/.config/htop ./ -r
 rsync -a ~/.doom.d/* ./doom.d -r
 rsync -a ~/.zshrc ./ -r
-rsync -a ~/.bash_aliases ./ -r
 rsync -a ~/.xbindkeysrc ./
 rsync -a ~/.aliases ./aliases -r
 rsync -a ~/.local/bin/dmenu_run_aliases.sh ./dmenu_run_aliases.sh -r
