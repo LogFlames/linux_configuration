@@ -2,33 +2,47 @@ import sys
 import time
 import subprocess
 
-if len(sys.argv) < 3:
+def print_usage():
     print("Usage: timem [count] command args ...")
+    print("             [count] - number of times to run. If negative the output is silenced.")
+
+if len(sys.argv) < 3:
+    print_usage()
     exit()
 
 try:
-    int(sys.argv[1])
+    num = int(sys.argv[1])
 except ValueError:
     print("ERROR: [count] must be a number.")
     exit()
 
-start = time.perf_counter()
+if num < 0:
+    start = time.perf_counter()
 
-for _ in range(int(sys.argv[1])):
-    subprocess.run(sys.argv[2:])
+    for _ in range(-num):
+        subprocess.check_output(sys.argv[2:])
 
-end = time.perf_counter()
+    end = time.perf_counter()
+else:
+    start = time.perf_counter()
 
-print(f"Ran '{' '.join(sys.argv[2:])}' {sys.argv[1]} times")
+    for _ in range(num):
+        subprocess.run(sys.argv[2:])
+
+    end = time.perf_counter()
+
+
+print(f"Ran '{' '.join(sys.argv[2:])}' {abs(num)} times" + (" with silenced input" if num < 0 else ""))
 
 total = end - start
 total_s = int(total)
 total_ms = int(total * 1000) % 1000
-print(f"Total  : {total_s}s {' ' * (3 - len(str(total_ms))) + str(total_ms)}ms")
-per = total / int(sys.argv[1])
+per = total / abs(num)
 per_s = int(per)
 per_ms = int(per * 1000) % 1000
-print(f"Per run: {per_s}s {' ' * (3 - len(str(per_ms))) + str(per_ms)}ms")
+max_len = max(len(str(total_s)), len(str(per_s)))
+print(f"Total  : {' ' * (max_len - len(str(total_s)))}{total_s}s {' ' * (3 - len(str(total_ms)))}{total_ms}ms")
+print(f"Per run: {' ' * (max_len - len(str(per_s)))}{per_s}s {' ' * (3 - len(str(per_ms)))}{per_ms}ms")
 
 
 
