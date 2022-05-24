@@ -8,6 +8,9 @@ Place the rm_with_check.py file at a location of your choosing. Then add this co
 
 > alias rm='python3 /path/to/rm_with_check.py'
 
+## Custom python script to run command multiple times and time the averege execution time
+This probably exists in bash... But when I wrote this I used zsh and found this to be the easiest solution.
+
 ## A changed dvorak layout based on 'se'. 
 This comes with minial changes. The 'tilde' key now has an tilde on it. 
 > cp se_custom /usr/share/X11/xkb/symbols/se
