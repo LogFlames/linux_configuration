@@ -15,6 +15,7 @@ alias open='xdg-open'
 
 # alias rm='rm -I'
 alias rm='python3 /usr/local/bin/rm_with_check.py'
+alias timem='python3 /usr/local/bin/timem.py'
 alias tasks='grep --exclude-dir=.git -nrEI "TODO|FIXME|TEMP|DEBUG|LOOKUP|TASK|NOTE" . 2>/dev/null'
 alias tasks-keys='echo "TODO|FIXME|TEMP|DEBUG|LOOKUP|TASK|NOTE"'
 
@@ -50,6 +51,8 @@ disown
 }
 
 alias kem='emacsclient -e "(kill-emacs)"'
+
+export TIMEFMT=$'real\t%E\nuser\t%U\nsys\t%S'
 
 export CODERUN_="chmod +x \$FULL && \$FULL"
 export CODERUN_sh="$CODERUN_"

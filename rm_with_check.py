@@ -25,15 +25,15 @@ if '/' in argv_joined and "-r" not in argv_joined:
     print_center_text(height // 2 - 8, "Trying to delete folder, you probably want to add the -r argument.")
 
 if '-r' in argv_joined:
-    code_length += 2
+    code_length += 1
     print_center_text(height // 2 - 7, "Trying to delete folder, using longer confirmation code.")
 
 if sum(map(lambda x: x in argv_joined, warning_tags)) > 0:
-    code_length += 2
+    code_length += 1
     print_center_text(height // 2 - 6, "Trying to delete by-file-type protected file{}, using longer confirmation code.".format("s" if multiple_objects else ""))
 
 if multiple_objects:
-    code_length += 2
+    code_length += 1
     print_center_text(height // 2 - 5, "Trying to delete multiple files, using longer confirmation code.")
 
 if not '/' in argv_joined:

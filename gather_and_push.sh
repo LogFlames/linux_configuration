@@ -10,13 +10,14 @@ rsync -a ~/.config/kitty ./ -r
 rsync -a ~/.config/kak ./ -r
 rsync -a ~/.config/htop ./ -r
 rsync -a ~/.doom.d/* ./doom.d -r
-rsync -a ~/.zshrc ./ -r
 rsync -a ~/.xbindkeysrc ./
 rsync -a ~/.aliases ./aliases -r
 rsync -a ~/.local/bin/dmenu_run_aliases.sh ./dmenu_run_aliases.sh -r
 rsync -a ~/.zshrc ./zshrc
 rsync -a ~/.p10k.zsh p10k.zsh
 rsync -a ~/.config/nvim ./nvim -r
+rsync -a /usr/local/bin/rm_with_check.py ./ -r
+rsync -a /usr/local/bin/timem.py ./ -r
 
 git diff
 git add .
