@@ -15,6 +15,7 @@ require('packer').startup(function()
   use 'wbthomason/packer.nvim' -- Package manager
   use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
   use 'morhetz/gruvbox'
+  use 'arzg/vim-plan9'
   use {
       'neoclide/coc.nvim',
       branch = 'release'
@@ -26,8 +27,8 @@ EOF
 
 let g:coc_global_extensions = [
   \ 'coc-snippets',
-  \ 'coc-pairs',
   \ 'coc-tsserver',
+  \ 'coc-pairs',
   \ 'coc-eslint', 
   \ 'coc-prettier', 
   \ 'coc-json', 

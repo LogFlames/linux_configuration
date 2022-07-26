@@ -50,3 +50,4 @@
 ;(unpin! t)
 
 (package! whole-line-or-region)
+(package! csv-mode)
