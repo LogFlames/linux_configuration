@@ -42,6 +42,8 @@ There are used more in my awesome config. To enable tapping and so on, same prin
 ## Adding undervolting
 [https://github.com/georgewhewell/undervolt](https://github.com/georgewhewell/undervolt)
 
+Service file exists in repo, place in /etc/systemd/system/undervolt.service
+
 ## OLED Brightness
 ~~ICC-Brightness~~
 This is now done via .xbacklight script, that uses xrandr and some awk (I really should learn it :)) to add or reduce the current brightness.
