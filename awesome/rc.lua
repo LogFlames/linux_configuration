@@ -325,8 +325,8 @@ globalkeys = gears.table.join(
               {description = "run dmenu with loaded aliases", group = "launcher"}),
 
     awful.key({ modkey },            "b",
-        function () awful.util.spawn("brave") end,
-              {description = "Open brave", group = "launcher"}),
+        function () awful.util.spawn("firefox") end,
+              {description = "Open firefox", group = "launcher"}),
 
     awful.key({ modkey },            "r",
         function () awful.util.spawn("emacsclient --create-frame --alternate-editor=\"\"") end,
