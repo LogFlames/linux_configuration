@@ -9,6 +9,10 @@ set shell=zsh
 
 colorscheme gruvbox
 
+" map <Space> <Leader>
+" let g:CommandTPreferredImplementation='lua'
+"   use 'wincent/command-t'
+
 lua << EOF
 local use = require('packer').use
 require('packer').startup(function()
@@ -48,7 +52,7 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <CR> pumvisible() ? "\<C-y><CR>" : "\<CR>"
 
 set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup " Better display for messages set cmdheight=2 " You will have bad experience for diagnostic messages when it's default 4000.
 set updatetime=300
