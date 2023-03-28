@@ -12,6 +12,9 @@ alias p='python3'
 alias vim=nvim
 alias ipy='ipython3'
 
+alias xit='exit'
+alias ixt='exit'
+
 alias open='xdg-open'
 
 # alias rm='rm -I'
