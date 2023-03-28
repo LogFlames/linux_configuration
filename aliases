@@ -4,6 +4,7 @@ alias la='ls -a'
 alias lsa='ls -a'
 alias ll='ls -lha'
 alias c='clear'
+alias cl='clear; ls'
 
 alias doas="doas "
 
