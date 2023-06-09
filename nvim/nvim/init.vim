@@ -13,22 +13,6 @@ colorscheme gruvbox
 " let g:CommandTPreferredImplementation='lua'
 "   use 'wincent/command-t'
 
-lua << EOF
-local use = require('packer').use
-require('packer').startup(function()
-  use 'wbthomason/packer.nvim' -- Package manager
-  use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
-  use 'morhetz/gruvbox'
-  use 'arzg/vim-plan9'
-  use {
-      'neoclide/coc.nvim',
-      branch = 'release'
-      }
-end)
-
-require'lspconfig'.pyright.setup{}
-EOF
-
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-tsserver',
@@ -64,3 +48,21 @@ set shortmess+=c
 " always show signcolumns
 set signcolumn=yes
 
+" Fix indentation for R shiny files
+autocmd FileType r setl indentexpr=""
+
+lua << EOF
+local use = require('packer').use
+require('packer').startup(function()
+  use 'wbthomason/packer.nvim' -- Package manager
+  use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
+  use 'morhetz/gruvbox'
+  use 'arzg/vim-plan9'
+  use {
+      'neoclide/coc.nvim',
+      branch = 'release'
+      }
+end)
+
+require'lspconfig'.pyright.setup{}
+EOF
