@@ -1,4 +1,4 @@
-set shiftwidth=2
-set tabstop=2
-set cino+=(0,W2,u0,+0,m1
-set indentexpr=""
+setl shiftwidth=2
+setl tabstop=2
+setl cino+=(0,W2,u0,+0,m1,j1
+setl indentexpr=""

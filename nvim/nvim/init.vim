@@ -9,6 +9,8 @@ set shell=zsh
 
 colorscheme gruvbox
 
+filetype on
+
 " map <Space> <Leader>
 " let g:CommandTPreferredImplementation='lua'
 "   use 'wincent/command-t'
