@@ -11,6 +11,8 @@ colorscheme gruvbox
 
 filetype on
 
+nmap <silent> gs <Esc>:syntax sync fromstart<CR>
+
 " map <Space> <Leader>
 " let g:CommandTPreferredImplementation='lua'
 "   use 'wincent/command-t'
