@@ -14,6 +14,8 @@ alias ipy='ipython3'
 
 alias xit='exit'
 alias ixt='exit'
+alias eit='exit'
+alias exi='exit'
 
 alias open='xdg-open'
 
