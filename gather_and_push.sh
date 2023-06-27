@@ -19,6 +19,7 @@ rsync -a ~/.config/nvim ./nvim -r
 rsync -a /usr/local/bin/rm_with_check.py ./ -r
 rsync -a /usr/local/bin/timem.py ./ -r
 rsync -a /etc/systemd/system/undervolt.service ./ -r
+rsync -a ~/.ssh/config ./
 
 git diff
 git add .
