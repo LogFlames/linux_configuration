@@ -13,6 +13,9 @@ filetype on
 
 nmap <silent> gs <Esc>:syntax sync fromstart<CR>
 
+set foldmethod=indent
+set foldlevel=20
+
 " map <Space> <Leader>
 " let g:CommandTPreferredImplementation='lua'
 "   use 'wincent/command-t'
@@ -31,6 +34,7 @@ let g:coc_global_extensions = [
   \ 'coc-r-lsp',
   \ 'coc-go',
   \ ]
+
 
 " Remap for rename current word
 nmap <silent> gcr <Plug>(coc-rename)

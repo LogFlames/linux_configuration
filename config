@@ -35,3 +35,6 @@ Host esc
     PubkeyAcceptedKeyTypes +ssh-rsa
     HostName nogrod-clone.nrm.se
     User eliaslund
+Host nrmes
+    User eliaslund
+    HostName nrm-shiny-esbase.nrm.se
