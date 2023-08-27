@@ -33,6 +33,7 @@ let g:coc_global_extensions = [
   \ 'coc-clangd',
   \ 'coc-r-lsp',
   \ 'coc-go',
+  \ 'coc-java', # yay -S jdtls (language server)
   \ ]
 
 
