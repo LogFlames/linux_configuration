@@ -6,6 +6,8 @@ alias ll='ls -lha'
 alias c='clear'
 alias cl='clear; ls'
 
+alias screenshot='coreshot'
+
 alias doas="doas "
 
 alias p='python3'
@@ -16,6 +18,8 @@ alias xit='exit'
 alias ixt='exit'
 alias eit='exit'
 alias exi='exit'
+
+alias intellij-idea='idea'
 
 alias open='xdg-open'
 

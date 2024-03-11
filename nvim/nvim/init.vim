@@ -77,3 +77,4 @@ end)
 
 require'lspconfig'.pyright.setup{}
 EOF
+
