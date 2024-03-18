@@ -348,7 +348,7 @@ globalkeys = gears.table.join(
              {description = "Change monitor setup", group = "multi monitor"}),
 
    awful.key({ modkey, "Shift" },   "a",
-        function() awful.util.spawn("feh --no-fehbg --bg-scale --randomize ~/Pictures/BackgroundImages/currentRandom/*") end,
+        function() awful.util.with_shell("feh --no-fehbg --bg-scale --randomize ~/Pictures/BackgroundImages/currentRandom/*") end,
              {description = "Reapply backgrounds with feh for new monitor layout", group = "multi monitor"}),
 
    awful.key({ modkey, "Control" },   "a",
