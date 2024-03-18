@@ -347,6 +347,14 @@ globalkeys = gears.table.join(
         function() xrandr.xrandr() end,
              {description = "Change monitor setup", group = "multi monitor"}),
 
+   awful.key({ modkey, "Shift" },   "a",
+        function() awful.util.spawn("feh --no-fehbg --bg-scale --randomize ~/Pictures/BackgroundImages/currentRandom/*") end,
+             {description = "Reapply backgrounds with feh for new monitor layout", group = "multi monitor"}),
+
+   awful.key({ modkey, "Control" },   "a",
+        function() awful.util.spawn("xrandr --output DP1 --scale 2x2") end,
+             {description = "Scale second monitor to 2x2 with xrandr. Useful if second monitor is 1920x1080", group = "multi monitor"}),
+
     -- BAR REMOVAL
     -- awful.key({ modkey }, "x",
     --           function ()
@@ -361,8 +369,8 @@ globalkeys = gears.table.join(
     -- BAR REMOVAL END
 
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+    -- awful.key({ modkey }, "p", function() menubar.show() end,
+    --           {description = "show the menubar", group = "launcher"})
 )
 
 clientkeys = gears.table.join(
