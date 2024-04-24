@@ -11,6 +11,8 @@ rsync -a ~/.config/kak ./ -r
 rsync -a ~/.config/htop ./ -r
 rsync -a ~/.config/sway ./ -r
 rsync -a ~/.config/tofi ./ -r
+rsync -a ~/.config/waybar ./ -r
+rsync -a ~/.config/networkmanager-dmenu ./ -r
 rsync -a ~/.doom.d/* ./doom.d -r
 rsync -a ~/.xbindkeysrc ./
 rsync -a ~/.aliases ./aliases -r

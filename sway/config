@@ -86,6 +86,9 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
+bindsym XF86AudioRaiseVolume exec pamixer -i 10
+bindsym XF86AudioLowerVolume exec pamixer -d 10
+bindsym XF86AudioMute exec pamixer -t
 
     # Start a terminal
     bindsym $mod+Return exec $term
@@ -239,14 +242,17 @@ set $purple #b16286
 set $aqua #689d68
 set $gray #a89984
 set $darkgray #1d2021
-set $darkblue #075d95
+set $darkblue #075d9550
 
 # class                 border    bground   text    indicator child_border
-client.focused          $darkblue $darkblue $fg     #6699ff   $darkblue
+client.focused          $darkblue $darkblue $fg     #6699ffa0   $darkblue
 client.focused_inactive $bg_2     #5F676A   $fg     #484E50   #5F676A
 client.unfocused        #28282880 #28282880 #888888 #292D2E   #222222
 client.urgent           #2F343A   #CC241D   $fg_1   #CC241D   #CC241D
 client.placeholder      #1D2021   #0C0C0C   $fg     #000000   #0C0C0C
+
+default_border pixel 3
+default_floating_border normal
 
 #
 # Status Bar:
@@ -254,10 +260,12 @@ client.placeholder      #1D2021   #0C0C0C   $fg     #000000   #0C0C0C
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position top
+    swaybar_command waybar
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %T'; do sleep 1; done
+    # status_command while date +'%Y-%m-%d %T'; do sleep 1; done
+    status_command while ~/.config/sway/status.sh; do sleep 1; done
 
     colors {
         statusline #ffffff
@@ -265,8 +273,8 @@ bar {
         inactive_workspace #32323200 #32323260 #cccccc
         focused_workspace #00000000 $darkblue  #ffffff
     }
+
+    font Fira Code Retina 12
 }
-
-
 
 include /etc/sway/config.d/*
