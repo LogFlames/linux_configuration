@@ -83,6 +83,10 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 #
 # Basics:
 #
+
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
+
     # Start a terminal
     bindsym $mod+Return exec $term
     bindsym $mod+b exec firefox
