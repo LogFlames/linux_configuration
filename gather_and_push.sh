@@ -9,6 +9,8 @@ rsync -a ~/.config/awesome ./ -r
 rsync -a ~/.config/kitty ./ -r
 rsync -a ~/.config/kak ./ -r
 rsync -a ~/.config/htop ./ -r
+rsync -a ~/.config/sway ./ -r
+rsync -a ~/.config/tofi ./ -r
 rsync -a ~/.doom.d/* ./doom.d -r
 rsync -a ~/.xbindkeysrc ./
 rsync -a ~/.aliases ./aliases -r
