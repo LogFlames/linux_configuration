@@ -67,7 +67,7 @@ xkb_symbols "dvorak" {
     key <AE09>  { [         9,     parenright, 9,             9] };
     key <AE10>  { [         0,     equal,      0,             0] };
     key <AE11>  { [         plus,     question, plusminus ] };
-    key <AE12>  { [         dead_acute,     dead_grave ] };
+    key <AE12>  { [         acute,     grave ] };
 
     key <AD01> { [apostrophe,   quotedbl,     asterisk,     asterisk ]	};
     key <AD02> { [    period,      colon,           at,           at ]	};
