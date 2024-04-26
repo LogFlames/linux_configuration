@@ -3,6 +3,7 @@
 * {
   transition: none;
   box-shadow: none;
+  font-family: "Font Awesome 5 Free", "Fira Code Retina";
 }
 
 #waybar {
