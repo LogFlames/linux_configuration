@@ -29,7 +29,8 @@
 //        "backlight",
 //        "keyboard-state",
 //        "sway/language",
-        "battery"
+        "battery",
+        "custom/power"
     ],
     // Modules configuration
     // "sway/workspaces": {
@@ -147,9 +148,10 @@
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
+    "custom/power": {
+        "interval": 5,
+		"exec": "/home/elias/.config/waybar/current_powerdraw.sh"
+	},
     "power-profiles-daemon": {
       "format": "{icon}",
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
