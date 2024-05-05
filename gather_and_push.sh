@@ -4,6 +4,7 @@ echo "Moving to linux configuration directory"
 cd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "Gathering config files"
+
 rsync -a ~/.config/polybar ./ -r
 rsync -a ~/.config/awesome ./ -r
 rsync -a ~/.config/kitty ./ -r
@@ -12,6 +13,8 @@ rsync -a ~/.config/htop ./ -r
 rsync -a ~/.config/sway ./ -r
 rsync -a ~/.config/tofi ./ -r
 rsync -a ~/.config/waybar ./ -r
+rsync -a ~/.config/sway-interactive-screenshot ./ -r
+
 rsync -a ~/.config/networkmanager-dmenu ./ -r
 rsync -a ~/.doom.d/* ./doom.d -r
 rsync -a ~/.xbindkeysrc ./

@@ -54,6 +54,10 @@ exec swayidle -w \
 
 bindswitch --locked --reload lid:on exec systemctl suspend
 
+exec mako
+
+bindsym Print exec /path/to/sway-interactive-screenshot
+
 ### Input configuration
 #
 # Example configuration:

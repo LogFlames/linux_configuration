@@ -1,0 +1,4 @@
+[screenshot]
+# Directory in which to save screenshots.
+save_dir = "~/Pictures"
+
