@@ -67,6 +67,7 @@ local use = require('packer').use
 require('packer').startup(function()
   use 'wbthomason/packer.nvim' -- Package manager
   use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
+  use 'dstein64/vim-startuptime'
   use 'morhetz/gruvbox'
   use 'arzg/vim-plan9'
   use {
@@ -75,6 +76,6 @@ require('packer').startup(function()
       }
 end)
 
-require'lspconfig'.pyright.setup{}
+ require'lspconfig'.pyright.setup{}
 EOF
 

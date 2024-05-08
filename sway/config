@@ -56,7 +56,9 @@ bindswitch --locked --reload lid:on exec systemctl suspend
 
 exec mako
 
-bindsym Print exec /path/to/sway-interactive-screenshot
+bindsym Print exec /usr/bin/sway-interactive-screenshot
+bindsym $mod+tab workspace next_on_output 
+bindsym $mod+Shift+tab workspace prev_on_output
 
 ### Input configuration
 #

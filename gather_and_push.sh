@@ -13,6 +13,7 @@ rsync -a ~/.config/htop ./ -r
 rsync -a ~/.config/sway ./ -r
 rsync -a ~/.config/tofi ./ -r
 rsync -a ~/.config/waybar ./ -r
+rsync -a ~/.config/mako ./ -r
 rsync -a ~/.config/sway-interactive-screenshot ./ -r
 
 rsync -a ~/.config/networkmanager-dmenu ./ -r
