@@ -39,6 +39,8 @@ let g:coc_global_extensions = [
 " Java language server: yay -S jtdls
 "
 let g:path_to_creds = '~/.config/nvim/credentials.json' " this is required
+let g:token_directory = '~/.config/nvim/' " optional; default is ./
+let g:gdoc_file_path = './' " optional; default is ./
 " let g:gdoc_file_path = '~/.vim/' " optional; default is ./
 " let g:token_directory = '~/.vim/' " optional; default is ./
 
