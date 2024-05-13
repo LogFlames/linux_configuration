@@ -37,6 +37,10 @@ let g:coc_global_extensions = [
   \ ]
 
 " Java language server: yay -S jtdls
+"
+let g:path_to_creds = '~/.config/nvim/credentials.json' " this is required
+" let g:gdoc_file_path = '~/.vim/' " optional; default is ./
+" let g:token_directory = '~/.vim/' " optional; default is ./
 
 
 " Remap for rename current word
@@ -74,6 +78,7 @@ require('packer').startup(function()
       'neoclide/coc.nvim',
       branch = 'release'
       }
+  use {'aadv1k/gdoc.vim', run = './install.py'}
 end)
 
  require'lspconfig'.pyright.setup{}

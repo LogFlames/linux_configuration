@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/elias/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
   },
+  ["gdoc.vim"] = {
+    loaded = true,
+    path = "/home/elias/.local/share/nvim/site/pack/packer/start/gdoc.vim",
+    url = "https://github.com/aadv1k/gdoc.vim"
+  },
   gruvbox = {
     loaded = true,
     path = "/home/elias/.local/share/nvim/site/pack/packer/start/gruvbox",
