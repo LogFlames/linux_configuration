@@ -42,7 +42,7 @@ alias rmtemp="rm -f temp.*; rm -rf temp/"
 
 
 alias icat="kitty +kitten icat"
-alias diff="kitty +kitten diff"
+alias idiff="kitty +kitten diff"
 
 # To place inside .bashrc
 # if [ -f ~/.bash_aliases ]; then
