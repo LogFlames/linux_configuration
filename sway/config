@@ -60,6 +60,11 @@ bindsym Print exec /usr/bin/sway-interactive-screenshot
 bindsym $mod+tab workspace next_on_output 
 bindsym $mod+Shift+tab workspace prev_on_output
 
+bindsym $mod+Control+Shift+Right move workspace to output right
+bindsym $mod+Control+Shift+Left move workspace to output left
+bindsym $mod+Control+Shift+Down move workspace to output down
+bindsym $mod+Control+Shift+Up move workspace to output up
+
 ### Input configuration
 #
 # Example configuration:
