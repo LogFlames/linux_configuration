@@ -15,7 +15,6 @@ rsync -a ~/.config/tofi ./ -r
 rsync -a ~/.config/waybar ./ -r
 rsync -a ~/.config/mako ./ -r
 rsync -a ~/.config/sway-interactive-screenshot ./ -r
-
 rsync -a ~/.config/networkmanager-dmenu ./ -r
 rsync -a ~/.doom.d/* ./doom.d -r
 rsync -a ~/.xbindkeysrc ./
@@ -28,6 +27,7 @@ rsync -a /usr/local/bin/rm_with_check.py ./ -r
 rsync -a /usr/local/bin/timem.py ./ -r
 rsync -a /etc/systemd/system/undervolt.service ./ -r
 rsync -a ~/.ssh/config ./
+rsync -a ~/.bash_profile ./
 
 git diff
 git add .
