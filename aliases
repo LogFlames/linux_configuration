@@ -63,6 +63,8 @@ emacsclient --create-frame --alternate-editor="" $* > /dev/null &
 disown
 }
 
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+
 alias kem='emacsclient -e "(kill-emacs)"'
 
 export TIMEFMT=$'real\t%E\nuser\t%U\nsys\t%S'
