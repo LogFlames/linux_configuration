@@ -54,16 +54,9 @@ exec swayidle -w \
 
 bindswitch --locked --reload lid:on exec systemctl suspend
 
+# Notifications:
 exec mako
 
-bindsym Print exec /usr/bin/sway-interactive-screenshot
-bindsym $mod+tab workspace next_on_output 
-bindsym $mod+Shift+tab workspace prev_on_output
-
-bindsym $mod+Control+Shift+Right move workspace to output right
-bindsym $mod+Control+Shift+Left move workspace to output left
-bindsym $mod+Control+Shift+Down move workspace to output down
-bindsym $mod+Control+Shift+Up move workspace to output up
 
 ### Input configuration
 #
@@ -93,15 +86,29 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 }
 
 ### Key bindings
+
+bindsym Print exec /usr/bin/sway-interactive-screenshot
+bindsym $mod+tab workspace next_on_output 
+bindsym $mod+Shift+tab workspace prev_on_output
+
+bindsym $mod+Control+Shift+Right move workspace to output right
+bindsym $mod+Control+Shift+Left move workspace to output left
+bindsym $mod+Control+Shift+Down move workspace to output down
+bindsym $mod+Control+Shift+Up move workspace to output up
+
+#
+# Functions keys:
+#
+    bindsym XF86MonBrightnessDown exec brightnessctl -e set 10%-
+    bindsym XF86MonBrightnessUp exec brightnessctl -e set 10%+
+    bindsym XF86AudioRaiseVolume exec pamixer -i 10
+    bindsym XF86AudioLowerVolume exec pamixer -d 10
+    bindsym XF86AudioMute exec pamixer -t
+
 #
 # Basics:
 #
 
-bindsym XF86MonBrightnessDown exec brightnessctl -e set 10%-
-bindsym XF86MonBrightnessUp exec brightnessctl -e set 10%+
-bindsym XF86AudioRaiseVolume exec pamixer -i 10
-bindsym XF86AudioLowerVolume exec pamixer -d 10
-bindsym XF86AudioMute exec pamixer -t
 
     # Start a terminal
     bindsym $mod+Return exec $term

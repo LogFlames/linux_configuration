@@ -207,4 +207,4 @@ export CODERUN_f="cd \$DIRECTORY && gfortran \$FILE -o \$NAME && \$DIRECTORY/\$N
 export CODERUN_for="$CODERUN_f"
 export CODERUN_f90="$CODERUN_f"
 
-export TERM=xterm-256color
+export TERM=xterm-kitty

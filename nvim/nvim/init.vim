@@ -54,6 +54,9 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+nmap <silent> gf <cmd>Telescope find_files<cr>
+nmap <silent> gb <cmd>Telescope buffers<cr>
+
 inoremap <silent><expr> <CR> pumvisible() ? "\<C-y><CR>" : "\<CR>"
 
 set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup " Better display for messages set cmdheight=2 " You will have bad experience for diagnostic messages when it's default 4000.
@@ -81,6 +84,11 @@ require('packer').startup(function()
       branch = 'release'
       }
   use {'aadv1k/gdoc.vim', run = './install.py'}
+  use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.6',
+      requires = { {'nvim-lua/plenary.nvim'} 
+      }
+}
 end)
 
  require'lspconfig'.pyright.setup{}
