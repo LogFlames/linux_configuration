@@ -63,7 +63,7 @@ emacsclient --create-frame --alternate-editor="" $* > /dev/null &
 disown
 }
 
-alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+alias ranger='TERM=xterm-kitty ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 
 alias kem='emacsclient -e "(kill-emacs)"'
 
@@ -207,4 +207,4 @@ export CODERUN_f="cd \$DIRECTORY && gfortran \$FILE -o \$NAME && \$DIRECTORY/\$N
 export CODERUN_for="$CODERUN_f"
 export CODERUN_f90="$CODERUN_f"
 
-export TERM=xterm-kitty
+export TERM=xterm-256color
