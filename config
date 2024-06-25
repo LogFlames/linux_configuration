@@ -31,3 +31,7 @@ Host esc
 Host nrmes
     User eliaslund
     HostName nrm-shiny-esbase.nrm.se
+Host temp_cbh
+    User root
+    HostName vm.cloud.cbh.kth.se
+    Port 20082

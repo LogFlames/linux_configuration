@@ -58,12 +58,19 @@ FCEDIT=nvim
 VISUAL=nvim
 EDITOR=nvim
 
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	\rm -f -- "$tmp"
+}
+
 function em { 
 emacsclient --create-frame --alternate-editor="" $* > /dev/null & 
 disown
 }
-
-alias ranger='TERM=xterm-kitty ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 
 alias kem='emacsclient -e "(kill-emacs)"'
 

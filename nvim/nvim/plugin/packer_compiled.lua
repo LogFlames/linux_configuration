@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["chezmoi.vim"] = {
+    loaded = true,
+    path = "/home/elias/.local/share/nvim/site/pack/packer/start/chezmoi.vim",
+    url = "https://github.com/alker0/chezmoi.vim"
+  },
   ["coc.nvim"] = {
     loaded = true,
     path = "/home/elias/.local/share/nvim/site/pack/packer/start/coc.nvim",

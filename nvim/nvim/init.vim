@@ -90,6 +90,7 @@ require('packer').startup(function()
   use 'morhetz/gruvbox'
   use 'arzg/vim-plan9'
   use 'preservim/nerdtree'
+  use 'alker0/chezmoi.vim'
   use {
       'neoclide/coc.nvim',
       branch = 'release'
