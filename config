@@ -35,3 +35,13 @@ Host temp_cbh
     User root
     HostName vm.cloud.cbh.kth.se
     Port 20082
+Host spexcms
+    User root
+    HostName vm.cloud.cbh.kth.se
+    Port 20085
+Host ampel
+    User elias
+    HostName ampel.karspexet.se
+Host mk
+    User root
+    HostName 5.180.181.145

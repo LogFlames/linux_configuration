@@ -19,6 +19,14 @@ alias ixt='exit'
 alias eit='exit'
 alias exi='exit'
 
+alias pull='git pull'
+alias push='git push'
+alias status='git status'
+alias gs='git status'
+alias ga='git add'
+alias gcm='git commit -m'
+
+
 alias intellij-idea='idea'
 
 alias open='xdg-open'
