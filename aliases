@@ -20,6 +20,7 @@ alias eit='exit'
 alias exi='exit'
 
 alias pull='git pull'
+alias gp='git push'
 alias push='git push'
 alias status='git status'
 alias gs='git status'
