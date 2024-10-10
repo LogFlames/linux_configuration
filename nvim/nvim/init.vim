@@ -92,6 +92,12 @@ require('packer').startup(function()
   use 'preservim/nerdtree'
   use 'alker0/chezmoi.vim'
   use {
+      "supermaven-inc/supermaven-nvim",
+      config = function()
+          require("supermaven-nvim").setup({})
+      end
+  }
+  use {
       'neoclide/coc.nvim',
       branch = 'release'
       }
