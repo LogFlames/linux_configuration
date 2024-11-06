@@ -118,7 +118,7 @@ bindsym $mod+Control+Shift+Up move workspace to output up
 
     # Start a terminal
     bindsym $mod+Return exec $term
-    bindsym $mod+b exec firefox
+    bindsym $mod+b exec zen-browser
     bindsym $mod+n exec networkmanager_dmenu
 
     bindsym $mod+Escape exec systemctl suspend
