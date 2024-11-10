@@ -6,7 +6,7 @@
   by Vidar Bronken Gundersen.
   Modified to Swedish layout by Albert Veli.
 -->
-<!--Last edited by Ukelele version 396 on 2024-11-09 at 21:44 (GMT+1)-->
+<!--Last edited by Ukelele version 396 on 2024-11-10 at 23:20 (GMT+1)-->
 <keyboard group="126" id="-30291" name="Swedish Dvorak (svdvorak)" maxout="3">
     <layouts>
         <layout first="0" last="0" mapSet="ANSI" modifiers="commonModifiers"/>
@@ -436,7 +436,7 @@
             <key code="9" output="ª"/>
             <key code="10" output="½"/>
             <!-- apostrophe -->
-            <key code="11" output="‹"/>
+            <key code="11" output="ø"/>
             <key code="12" action="ringabove"/>
             <key code="13" output="‚"/>
             <key code="14" output="…"/>
@@ -486,7 +486,7 @@
             <key code="47" output="½"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" output=" "/>
-            <key code="50" output="ø"/>
+            <key code="50" output="‹"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
@@ -578,7 +578,7 @@
             <!-- combining tilde -->
             <key code="10" output="§"/>
             <!-- section -->
-            <key code="11" output="«"/>
+            <key code="11" output="Ø"/>
             <!-- combining macronbelow -->
             <key code="12" output="̊"/>
             <!-- combining ringabove -->
@@ -635,7 +635,7 @@
             <key code="40" output="‡"/>
             <!-- Thorn -->
             <key code="41" output="∑"/>
-            <key code="42" output="&#x0022;"/>
+            <key code="42" output="≥"/>
             <!-- quote -->
             <key code="43" output="”"/>
             <!-- combining commabelow -->
@@ -649,7 +649,7 @@
             <key code="48" output="&#x0009;"/>
             <key code="49" output=" "/>
             <!-- non-breaking space -->
-            <key code="50" output="Ø"/>
+            <key code="50" output="«"/>
             <!-- O diaeresis -->
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
@@ -1489,7 +1489,7 @@
             <when state="specials" output="Ƿ"/>
         </action>
         <action id="X">
-            <when state="none" output="*"/>
+            <when state="none" output="Ö"/>
             <when state="caron" output="Ǯ"/>
             <when state="diaeresis" output="Ẍ"/>
             <when state="dotabove" output="Ẋ"/>
@@ -1893,7 +1893,7 @@
             <when state="specials" output="ƿ"/>
         </action>
         <action id="x">
-            <when state="none" output="&#x0027;"/>
+            <when state="none" output="ö"/>
             <when state="caron" output="ǯ"/>
             <when state="diaeresis" output="ẍ"/>
             <when state="dotabove" output="ẋ"/>
@@ -1941,7 +1941,7 @@
             <when state="macron" output="Ǣ"/>
         </action>
         <action id="Ø">
-            <when state="none" output="Ö"/>
+            <when state="none" output="*"/>
             <when state="acute" output="Ǿ"/>
         </action>
         <action id="å">
@@ -1954,7 +1954,7 @@
             <when state="macron" output="ǣ"/>
         </action>
         <action id="ø">
-            <when state="none" output="ö"/>
+            <when state="none" output="&#x0027;"/>
             <when state="acute" output="ǿ"/>
         </action>
         <action id="‘">
