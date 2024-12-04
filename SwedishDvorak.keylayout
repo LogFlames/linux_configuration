@@ -6,8 +6,8 @@
   by Vidar Bronken Gundersen.
   Modified to Swedish layout by Albert Veli.
 -->
-<!--Last edited by Ukelele version 396 on 2024-11-10 at 23:20 (GMT+1)-->
-<keyboard group="126" id="-30291" name="Swedish Dvorak (svdvorak)" maxout="3">
+<!--Last edited by Ukelele version 396 on 2024-11-11 at 22:37 (GMT+1)-->
+<keyboard group="126" id="-24919" name="Swedish Dvorak (svdvorak)" maxout="3">
     <layouts>
         <layout first="0" last="0" mapSet="ANSI" modifiers="commonModifiers"/>
     </layouts>
@@ -87,7 +87,7 @@
             <key code="39" output="-"/>
             <key code="40" action="t"/>
             <key code="41" action="s"/>
-            <key code="42" output="&#x003C;"/>
+            <key code="42" output="&#x0027;"/>
             <key code="43" action="w"/>
             <key code="44" action="z"/>
             <key code="45" action="b"/>
@@ -218,7 +218,7 @@
             <key code="39" output="_"/>
             <key code="40" action="T"/>
             <key code="41" action="S"/>
-            <key code="42" output="&#x003E;"/>
+            <key code="42" output="*"/>
             <key code="43" action="W"/>
             <key code="44" action="Z"/>
             <key code="45" action="B"/>
@@ -439,7 +439,7 @@
             <key code="11" output="ø"/>
             <key code="12" action="ringabove"/>
             <key code="13" output="‚"/>
-            <key code="14" output="…"/>
+            <key code="14" output="π"/>
             <!-- ellipsis -->
             <key code="15" output="π"/>
             <key code="16" output="ƒ"/>
@@ -466,19 +466,19 @@
             <key code="29" output="≈"/>
             <key code="30" action="~"/>
             <key code="31" output="®"/>
-            <key code="32" output=""/>
+            <key code="32" output="ç"/>
             <key code="33" output="‚"/>
-            <key code="34" output="ç"/>
-            <key code="35" output="ﬁ"/>
+            <key code="34" output="©"/>
+            <key code="35" output="λ"/>
             <key code="36" output="&#x000D;"/>
             <key code="37" output="ñ"/>
             <key code="38" output=""/>
             <key code="39" output="–"/>
-            <key code="40" output="†"/>
+            <key code="40" output="™"/>
             <!-- thorn -->
             <key code="41" output="ß"/>
             <!-- sharp s -->
-            <key code="42" output="≤"/>
+            <key code="42" output="‹"/>
             <key code="43" output="’"/>
             <key code="44" output="÷"/>
             <key code="45" output="›"/>
@@ -486,7 +486,7 @@
             <key code="47" output="½"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" output=" "/>
-            <key code="50" output="‹"/>
+            <key code="50" output="≤"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
@@ -584,7 +584,7 @@
             <!-- combining ringabove -->
             <key code="13" output="„"/>
             <!-- double low-9 quotation mark -->
-            <key code="14" output="·"/>
+            <key code="14" output="∏"/>
             <!-- middle dot -->
             <key code="15" output="∏"/>
             <!-- combining dotabove -->
@@ -624,7 +624,7 @@
             <!-- double low-9 quotation mark -->
             <key code="34" output="Ç"/>
             <!-- combining cedilla -->
-            <key code="35" output="ﬂ"/>
+            <key code="35" output="Λ"/>
             <!-- combining stroke -->
             <key code="36" output="&#x000D;"/>
             <key code="37" output="Ñ"/>
@@ -635,7 +635,7 @@
             <key code="40" output="‡"/>
             <!-- Thorn -->
             <key code="41" output="∑"/>
-            <key code="42" output="≥"/>
+            <key code="42" output="«"/>
             <!-- quote -->
             <key code="43" output="”"/>
             <!-- combining commabelow -->
@@ -649,7 +649,7 @@
             <key code="48" output="&#x0009;"/>
             <key code="49" output=" "/>
             <!-- non-breaking space -->
-            <key code="50" output="«"/>
+            <key code="50" output="≥"/>
             <!-- O diaeresis -->
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
@@ -1941,7 +1941,7 @@
             <when state="macron" output="Ǣ"/>
         </action>
         <action id="Ø">
-            <when state="none" output="*"/>
+            <when state="none" output="&#x003E;"/>
             <when state="acute" output="Ǿ"/>
         </action>
         <action id="å">
@@ -1954,7 +1954,7 @@
             <when state="macron" output="ǣ"/>
         </action>
         <action id="ø">
-            <when state="none" output="&#x0027;"/>
+            <when state="none" output="&#x003C;"/>
             <when state="acute" output="ǿ"/>
         </action>
         <action id="‘">
